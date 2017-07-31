@@ -18,18 +18,22 @@ html {
 }
 
 header {
-	background: linear-gradient(rgba(171, 71, 180, .1), rgba(171, 71, 180, .5)), url(img/bg.jpeg); 
+	background: linear-gradient( rgba(223, 231, 249, .1), rgba(171, 71, 180, .9) ), url(img/bg.jpeg); 
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
+
 }
 
-.hero-text-box {
+.about-text-box {
+	text-align: center;
 	position: absolute;
 	width: 1140px;
-	top: 50%;
+	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	color: #fff;
+	line-height: 2;
 }
 
 
