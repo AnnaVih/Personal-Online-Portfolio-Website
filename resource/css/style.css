@@ -90,7 +90,7 @@ h4 {
 /*===============================================*/
 
 .about-me{
-	margin-top: 100px;
+	margin-top: 80px;
 }
 /* ==============================================
 /* HEADER STYLE */
@@ -260,15 +260,88 @@ header {
 
 .about img {
 	width: 80%;
+	margin: 10px;
 	display: block;
 	border-radius: 3%;
 }
 
 #about-me-animated {
 	position: absolute;
-	top: -20%;
-	right: 20%;
+	top: -30%;
+	right: 0;
 	width: 200px;
 }
+
+/* ==============================================
+/* PROJECTS*/
+/*===============================================*/
+
+.section-projects {
+	position: relative;
+}
+
+#projects-animated {
+	position: absolute;
+	width: 200px;
+	left: 30%;
+	top: -3%;
+}
+
+.my-projects {
+	list-style: none;
+	width: 100%;
+	margin-top: 60px;
+}
+
+.my-projects li {
+	margin-top: 20px;
+	display:  block;
+	float: left;
+	width: 25%;
+}
+
+.my-projects li a:link,
+.my-projects li a:visited{
+	text-decoration: none;
+	color: #555;
+}
+
+.project {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.project img {
+	opacity: 0.7;
+	width: 100%;
+	height: auto;
+	transform: scale(1.15);
+	transition: all .5s;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	-moz-transition: all .5s;
+}
+
+.project img:hover {
+	opacity: 1;
+	transform: scale(1.06);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
