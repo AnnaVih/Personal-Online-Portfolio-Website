@@ -90,8 +90,8 @@ h4 {
 /*===============================================*/
 
 .about-me{
-	margin-top: 10px;
-	margin-bottom: 37px;
+	margin-bottom: 40px;
+	padding: 2%;
 }
 
 /* ==============================================
@@ -242,51 +242,49 @@ input[type=submit]{
 /* ICONS*/
 /*===============================================*/
 
-.qualities-icon {
-	text-align: center;
-	font-size: 200%;
-	display: block;
-	color: #8e44ad;
-	margin-bottom: 10px;
-}
-
 .skills-icon {
 	text-align: center;
-	font-size: 250%;
+	font-size: 350%;
 	color: #8e44ad;
 	display: block;
-
 }
 
+.qualities-icon {
+	text-align: center;
+	font-size: 150%;
+	display: block;
+	color: #8e44ad;
+}
 
 /* ==============================================
 /* ABOUT ME*/
 /*===============================================*/
-.qualities {
-	margin-top: 150px;
-	padding: 1%;
-}
-
-.qualities p {
-	font-size: 90%;
-}
-
-.about {
-	margin: 100px auto;
-}
-
-.about img {
-	width: 80%;
-	margin: 10px;
-	display: block;
-	border-radius: 3%;
-}
-
 #about-me-animated {
 	position: absolute;
 	top: 13%;
 	right: 45%;
 	width: 12%;
+}
+
+
+.about {
+	margin: 180px auto 0;
+}
+
+.about img {
+	width: 100%;
+	margin: 3%;
+	display: block;
+	border-radius: 3%;
+}
+
+.qualities {
+	padding: 1%;
+	margin-top: 100px;
+}
+
+.qualities p {
+	font-size: 90%;
 }
 
 /* ==============================================
