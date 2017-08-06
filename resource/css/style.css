@@ -90,8 +90,8 @@ h4 {
 /*===============================================*/
 
 .about-me{
-	margin-bottom: 40px;
-	padding: 2%;
+	margin-bottom: 25px;
+	/*padding: 2%;*/
 }
 
 /* ==============================================
@@ -101,7 +101,7 @@ h4 {
 .about, 
 .section-projects,
 .section-about-me,
-.section-hire-me {
+.section-hire-me{
 	position: relative;
 }
 
@@ -245,8 +245,28 @@ input[type=submit]{
 .skills-icon {
 	text-align: center;
 	font-size: 350%;
-	color: #8e44ad;
 	display: block;
+}
+
+
+.ion-social-html5 {
+	color: #e44d26;
+}
+
+.ion-social-css3 {
+	color: #1b73ba;
+}
+
+.ion-social-javascript-outline {
+	color: #f7df1e;
+}
+
+.ion-social-sass {
+	color: #cf649a;
+}
+
+.ion-social-github {
+	color: #333;
 }
 
 .qualities-icon {
@@ -262,8 +282,8 @@ input[type=submit]{
 #about-me-animated {
 	position: absolute;
 	top: 13%;
-	right: 45%;
-	width: 12%;
+	right: 46%;
+	width: 10%;
 }
 
 
@@ -272,8 +292,8 @@ input[type=submit]{
 }
 
 .about img {
-	width: 100%;
-	margin: 3%;
+	width: 50%;
+	margin: 0 auto;
 	display: block;
 	border-radius: 3%;
 }
@@ -384,8 +404,8 @@ input[type=submit]{
 }
 
 .hire-me-form {
-	width: 60%;
-	margin: 90px auto 0;
+	width: 80%;
+	margin: 40px auto 0;
 }
 
 input[type=text],
@@ -404,21 +424,100 @@ textarea {
 
 *:focus {outline: none;}
 
+
+.work-together {
+	text-align: center;
+	font-weight: bold;
+
+}
+
 #hire-me-animated {
 	position: absolute;
 	width: 9%;
 	bottom: 0;
-	right: 35%;
+	right: 30%;
 } 
 
+/* ==============================================
+/* FOOTER*/
+/*===============================================*/
 
+footer {
+	margin-top: 90px;
+	padding: 30px;
+	background-color: #333;
+	font-size: 80%;
 
+}
 
+.footer-nav {
+	list-style: none;
+	float: left;
+}
 
+.social-links {
+	list-style: none;
+	float: right;
+}
 
+.footer-nav li,
+.social-links li{
+	display: inline-block;
+	margin-right: 20px;
+}
 
+.footer-nav li:last-child,
+.social-links li:last-child {
+	margin-right: 0;
+}
 
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+	text-decoration: none;
+	border: 0;
+	color: #888;
+}
 
+.footer-nav li a:hover,
+.footer-nav li a:active {
+	color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+	font-size: 160%;
+}
+
+.ion-social-linkedin-outline,
+.ion-social-twitter-outline,
+.ion-social-facebook-outline,
+.ion-social-github-outline {
+	transition: color .3s;
+}
+
+.ion-social-linkedin-outline:hover {
+	color: #007bb5;
+}
+
+.ion-social-twitter-outline:hover {
+	color: #55acee;
+}
+
+.ion-social-facebook-outline:hover {
+	color: #3b5998;
+}
+
+.ion-social-github-outline:hover {
+	color: #000;
+}
+
+footer p {
+	color: #888;
+	text-align: center;
+	margin-top: 10px;
+}
 
 
 
