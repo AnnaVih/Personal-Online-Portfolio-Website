@@ -145,13 +145,13 @@
 
 	#header-animated { display: none; }
 
-	.section-projects {
-		padding-bottom: 85px;
-	}
+	.section-projects { padding-bottom: 85px; }
 
-	#projects-animated { 
-		left: 30%;
-	}
+	.my-projects li { width: 50%; }
+
+	#projects-animated { left: 30%; }
+
+	.projects-animated-work { bottom: 0; }
 
 	.section-hire-me p {
 		width: 100%;
