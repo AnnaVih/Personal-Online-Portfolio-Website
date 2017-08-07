@@ -14,13 +14,23 @@
 	box-sizing: border-box;
 }
 
-html {
+html,
+body {
 	color: #555;
 	font-family: 'Lato', 'Arial', sans-serif;
 	font-weight: 300;
 	font-size: 20px;
 	text-rendering: optimizeLegibility;
 	line-height: 1.5;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
 }
 
 /* ==============================================
@@ -31,11 +41,7 @@ html {
 	margin: 0 auto;
 }
 
-section {
-	padding: 60px 0;
-}
-
-
+section { padding: 60px 0;}
 
 /* ==============================================
 /*  HEADINHS */
@@ -64,9 +70,7 @@ h3:after {
 	margin-top: 30px;
 }
 
-h4 {
-	font-size: 110%;
-}
+h4 { font-size: 110%;}
 
 
 .header-text-box h1 {
@@ -80,9 +84,7 @@ h4 {
 	text-transform: none;
 }
 
-.about h4{
-	text-align: center;
-}
+.about h4{ text-align: center;}
 
 
 /* ==============================================
@@ -90,8 +92,10 @@ h4 {
 /*===============================================*/
 
 .about-me{
-	margin-bottom: 25px;
-	/*padding: 2%;*/
+	width: 85%;
+	margin: 0 auto 25px;
+	padding: 1%;
+	text-align: justify;
 }
 
 /* ==============================================
@@ -101,9 +105,7 @@ h4 {
 .about, 
 .section-projects,
 .section-about-me,
-.section-hire-me{
-	position: relative;
-}
+.section-hire-me{ position: relative;}
 
 /* ==============================================
 /* HEADER STYLE */
@@ -135,10 +137,10 @@ h4 {
 }
 
 #header-animated {
-	width: 18%;
+	width: 15%;
 	position: absolute;
 	top: -70%;
-	left: 40%;
+	left: 42%;
 }
 
 
@@ -186,14 +188,10 @@ input[type=submit]:active {
 
 .btn-inspect:hover,
 .btn-inspect:active,
-input[type=submit]{
-	border: 1px solid #703688;
-}
+input[type=submit] { border: 1px solid #703688;}
 
 .btn-hire:hover,
-.btn-hire:active {
-	border: 1px solid #703688;
-}
+.btn-hire:active { border: 1px solid #703688;}
 
 /* ==============================================
 /* LOGO & NAVIGATION */
@@ -234,9 +232,7 @@ input[type=submit]{
 }
 
 .main-nav li a:hover,
-.main-nav li a:active {
-	border-bottom: 2px solid #703688;
-}
+.main-nav li a:active { border-bottom: 2px solid #703688;}
 
 /* ==============================================
 /* ICONS*/
@@ -249,25 +245,15 @@ input[type=submit]{
 }
 
 
-.ion-social-html5 {
-	color: #e44d26;
-}
+.ion-social-html5 { color: #e44d26;}
 
-.ion-social-css3 {
-	color: #1b73ba;
-}
+.ion-social-css3 { color: #1b73ba;}
 
-.ion-social-javascript-outline {
-	color: #f7df1e;
-}
+.ion-social-javascript-outline { color: #f7df1e;}
 
-.ion-social-sass {
-	color: #cf649a;
-}
+.ion-social-sass { color: #cf649a;}
 
-.ion-social-github {
-	color: #333;
-}
+.ion-social-github { color: #333;}
 
 .qualities-icon {
 	text-align: center;
@@ -282,30 +268,30 @@ input[type=submit]{
 #about-me-animated {
 	position: absolute;
 	top: 13%;
-	right: 46%;
-	width: 10%;
+	right: 47%;
+	width: 8%;
 }
 
 
-.about {
-	margin: 180px auto 0;
-}
+.about { margin: 180px auto 0;}
 
 .about img {
-	width: 50%;
 	margin: 0 auto;
+	width: 100%;
 	display: block;
 	border-radius: 3%;
 }
 
-.qualities {
-	padding: 1%;
-	margin-top: 100px;
+.skills {
+	width: 60%;
 }
 
-.qualities p {
-	font-size: 90%;
+.qualities {
+	padding: 1%;
+	margin-top: 200px;
 }
+
+.qualities p { font-size: 90%;}
 
 /* ==============================================
 /* PROJECTS*/
@@ -313,24 +299,20 @@ input[type=submit]{
 
 .section-projects {
 	background-color: #f4f4f4;
-	padding-bottom: 13%;
+	padding-bottom: 150px
+	/*padding-bottom: %;*/
 }
 
 #projects-animated {
 	position: absolute;
-	width: 6%;
-	left: 37%;
-	top: 3%;
-}
-
-.projects {
-	margin-bottom: 5%;
+	width: 4%;
+	left: 38%;
+	top: 2%;
 }
 
 .my-projects {
 	list-style: none;
 	width: 100%;
-	overflow: hidden;
 }
 
 .my-projects li {
@@ -365,7 +347,7 @@ input[type=submit]{
 	-moz-transition: all .5s;
 }
 
-.project-caption {
+/*.project-caption {
 	position: absolute;
 	color: #dcb9e9;
 	top: 50%;
@@ -376,22 +358,20 @@ input[type=submit]{
 	z-index: 1;
 	transition: all 2s;
 	text-shadow: 1px 1px 1px #000;
-}
+}*/
 
 .project img:hover {
 	opacity: 1;
 	transform: scale(1.06);
 }
 
-.project img:hover + .project-caption{
-	z-index: -1;
-}
+/*.project img:hover + .project-caption{ z-index: -1;}*/
 
 .projects-animated-work {
 	position: absolute;
-	width: 15%;
+	width: 8%;
 	bottom: -3%;
-	left: 42%;
+	left: 45.5%;
 }
 
 /* ==============================================
@@ -418,9 +398,7 @@ textarea {
 	border: 1px solid #ccc;
 }
 
-textarea {
-	height: 100px;
-}
+textarea { height: 100px;}
 
 *:focus {outline: none;}
 
@@ -467,9 +445,7 @@ footer {
 }
 
 .footer-nav li:last-child,
-.social-links li:last-child {
-	margin-right: 0;
-}
+.social-links li:last-child { margin-right: 0;}
 
 .footer-nav li a:link,
 .footer-nav li a:visited,
@@ -481,37 +457,23 @@ footer {
 }
 
 .footer-nav li a:hover,
-.footer-nav li a:active {
-	color: #ddd;
-}
+.footer-nav li a:active { color: #ddd;}
 
 .social-links li a:link,
-.social-links li a:visited {
-	font-size: 160%;
-}
+.social-links li a:visited { font-size: 160%;}
 
 .ion-social-linkedin-outline,
 .ion-social-twitter-outline,
 .ion-social-facebook-outline,
-.ion-social-github-outline {
-	transition: color .3s;
-}
+.ion-social-github-outline { transition: color .3s;}
 
-.ion-social-linkedin-outline:hover {
-	color: #007bb5;
-}
+.ion-social-linkedin-outline:hover { color: #007bb5;}
 
-.ion-social-twitter-outline:hover {
-	color: #55acee;
-}
+.ion-social-twitter-outline:hover { color: #55acee;}
 
-.ion-social-facebook-outline:hover {
-	color: #3b5998;
-}
+.ion-social-facebook-outline:hover { color: #3b5998;}
 
-.ion-social-github-outline:hover {
-	color: #000;
-}
+.ion-social-github-outline:hover { color: #000;}
 
 footer p {
 	color: #888;
