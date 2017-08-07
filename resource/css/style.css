@@ -11,7 +11,8 @@
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 html,
@@ -22,9 +23,11 @@ body {
 	font-size: 20px;
 	text-rendering: optimizeLegibility;
 	line-height: 1.5;
+	overflow-x: hidden;
 }
 
-.clearfix {zoom: 1;}
+.clearfix {zoom: 1; }
+
 .clearfix:after {
     content: '.';
     clear: both;
@@ -32,6 +35,8 @@ body {
     height: 0;
     visibility: hidden;
 }
+
+*:focus {outline: none; }
 
 /* ==============================================
 /*  REUSABLE STYLE */
@@ -41,7 +46,7 @@ body {
 	margin: 0 auto;
 }
 
-section { padding: 60px 0;}
+section { padding: 70px 0; }
 
 /* ==============================================
 /*  HEADINHS */
@@ -70,7 +75,7 @@ h3:after {
 	margin-top: 30px;
 }
 
-h4 { font-size: 110%;}
+h4 { font-size: 110%; }
 
 
 .header-text-box h1 {
@@ -84,7 +89,7 @@ h4 { font-size: 110%;}
 	text-transform: none;
 }
 
-.about h4{ text-align: center;}
+.about h4{ text-align: center; }
 
 
 /* ==============================================
@@ -105,7 +110,7 @@ h4 { font-size: 110%;}
 .about, 
 .section-projects,
 .section-about-me,
-.section-hire-me{ position: relative;}
+.section-hire-me{ position: relative; }
 
 /* ==============================================
 /* HEADER STYLE */
@@ -113,10 +118,8 @@ h4 { font-size: 110%;}
 
 
 .header {
-	background: linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg.jpeg);
 	background: -webkit-linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg.jpeg);
-	background: -moz-linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg.jpeg);
-	background: -o-linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg.jpeg); 
+	background: linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg.jpeg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -157,6 +160,7 @@ input[type=submit] {
 	padding: 12px 40px;
 	font-weight: 300;
 	text-decoration: none;
+	text-transform: uppercase;
 	border-radius: 5px;
 	transition: all .3s;
 	-webkit-transition: all .3s;
@@ -188,10 +192,10 @@ input[type=submit]:active {
 
 .btn-inspect:hover,
 .btn-inspect:active,
-input[type=submit] { border: 1px solid #703688;}
+input[type=submit] { border: 1px solid #703688; }
 
 .btn-hire:hover,
-.btn-hire:active { border: 1px solid #703688;}
+.btn-hire:active { border: 1px solid #703688; }
 
 /* ==============================================
 /* LOGO & NAVIGATION */
@@ -232,7 +236,7 @@ input[type=submit] { border: 1px solid #703688;}
 }
 
 .main-nav li a:hover,
-.main-nav li a:active { border-bottom: 2px solid #703688;}
+.main-nav li a:active { border-bottom: 2px solid #703688; }
 
 /* ==============================================
 /* ICONS*/
@@ -245,15 +249,15 @@ input[type=submit] { border: 1px solid #703688;}
 }
 
 
-.ion-social-html5 { color: #e44d26;}
+.ion-social-html5 { color: #e44d26; }
 
-.ion-social-css3 { color: #1b73ba;}
+.ion-social-css3 { color: #1b73ba; }
 
-.ion-social-javascript-outline { color: #f7df1e;}
+.ion-social-javascript-outline { color: #f7df1e; }
 
-.ion-social-sass { color: #cf649a;}
+.ion-social-sass { color: #cf649a; }
 
-.ion-social-github { color: #333;}
+.ion-social-github { color: #333; }
 
 .qualities-icon {
 	text-align: center;
@@ -273,7 +277,7 @@ input[type=submit] { border: 1px solid #703688;}
 }
 
 
-.about { margin: 180px auto 0;}
+.about { margin: 180px auto 0; }
 
 .about img {
 	margin: 0 auto;
@@ -288,7 +292,7 @@ input[type=submit] { border: 1px solid #703688;}
 
 .qualities {
 	padding: 1%;
-	margin-top: 200px;
+	margin-top: 150px;
 }
 
 .qualities p { font-size: 90%;}
@@ -300,7 +304,6 @@ input[type=submit] { border: 1px solid #703688;}
 .section-projects {
 	background-color: #f4f4f4;
 	padding-bottom: 150px
-	/*padding-bottom: %;*/
 }
 
 #projects-animated {
@@ -340,6 +343,7 @@ input[type=submit] { border: 1px solid #703688;}
 	opacity: 0.7;
 	width: 100%;
 	height: auto;
+	-webkit-transform: scale(1.15);
 	transform: scale(1.15);
 	transition: all .5s;
 	-webkit-transition: all .5s;
@@ -362,6 +366,7 @@ input[type=submit] { border: 1px solid #703688;}
 
 .project img:hover {
 	opacity: 1;
+	-webkit-transform: scale(1.06);
 	transform: scale(1.06);
 }
 
@@ -398,10 +403,7 @@ textarea {
 	border: 1px solid #ccc;
 }
 
-textarea { height: 100px;}
-
-*:focus {outline: none;}
-
+textarea { height: 100px; }
 
 .work-together {
 	text-align: center;
@@ -465,7 +467,9 @@ footer {
 .ion-social-linkedin-outline,
 .ion-social-twitter-outline,
 .ion-social-facebook-outline,
-.ion-social-github-outline { transition: color .3s;}
+.ion-social-github-outline { 
+	-webkit-transition: color .3s; 
+	transition: color .3s;}
 
 .ion-social-linkedin-outline:hover { color: #007bb5;}
 
@@ -480,6 +484,8 @@ footer p {
 	text-align: center;
 	margin-top: 10px;
 }
+
+
 
 
 
