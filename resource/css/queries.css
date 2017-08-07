@@ -1,0 +1,67 @@
+/*Big tablet to 1200px (widths smaller tnan the 1140px row*/
+@media only screen and (max-width: 1200px) {
+	.header-text-box {
+	width: 100%;
+	padding: 0 2%;
+	}
+
+	.row { padding: 0 2%;}
+	#projects-animated { top: 5%;}
+}
+
+
+
+
+/* Small tablet to big tablet :from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+
+	body {font-size: 18px;}
+	section { padding: 35px 0;}
+	#header-animated { top: -60%;}
+
+	#about-me-animated {
+		width: 15%;
+		right: 44%;
+	}
+
+	.about {margin-top: 80px;}
+	.about img { width: 70%;}
+
+	#projects-animated { 
+		top: 2%;
+		left: 34%;
+		width: 7%;
+	}
+
+	.projects-animated-work {
+		width: 15%;
+		left: 42%;
+	}
+
+	#hire-me-animated {
+		width: 15%;
+		bottom: 1%;
+		right: 20%;
+	}
+
+	.section-hire-me p {
+	width: 80%;
+	margin: 30px auto 0;
+	}
+
+	.hire-me-form { width: 90%;}
+}
+
+
+/* Small phones to small tablets:from 481px to 767px */
+@media only screen and (max-width: 767px) {
+
+
+}
+
+
+/* Small phones from: 0 to 480px */
+@media only screen and (max-width: 480px) {
+
+
+}
