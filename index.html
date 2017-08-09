@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Portfolio Anna Vihrogonova</title>
+		<title>Anna Vihrogonova | Web designer &amp; Front End Developer</title>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,15 @@
 		<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
 		<!--  Normalize stylesheet -->
 		<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+		<!-- Animate stylesheet -->
+		<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
 		<!--  Main Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="resource/css/style.css">
+		<!--  Media queries Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="resource/css/queries.css">
 		 <!--  Fonts  -->
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-		<!-- Logo icon -->
+		<!-- Favicon icon -->
 		<link rel="icon" type="image/png" href="resource/css/img/logoSmall.png"> 
 	</head>
 	<body>
@@ -28,28 +31,31 @@
 					<img src="resource/css/img/logoWhite.png" alt="AnnaVig logo white" class="logo-white">
 					<img src="resource/css/img/logo.png" alt="AnnaVig logo color" class="logo-color">
 					<ul class="main-nav">
-						<li><a href="#">About me</a></li>
-						<li><a href="#">Projects</a></li>
-						<li><a href="#">Hire me</a></li>
+						<li><a href="#aboutMe">About me</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#hireMe">Hire me</a></li>
 					</ul>
 				</div>
 			</nav>
 			<!-- End Navigation -->
 			<!-- Start Header Text -->
 			<div class="header-text-box">
-			<img id="header-animated" src="resource/css/img/header.png" alt="woman">
-				<h1> &#60;h1&#62; Hello World! &#60;h1&#62;</h1>
-				<h2>  &#60;h2&#62; I'am Anna Vihrogonova. <br> Web Designer &#38; Front-End Developer &#60;h2&#62; </h2>
-				<a href="#" class="btn btn-inspect">Inspect Me</a>
-					<a href="#" class="btn btn-hire">Hire Me</a>
+			<img id="header-animated" class="js-header-animated" src="resource/css/img/header.png" alt="woman">
+				<h1 class="js-heading-fadeIn">&#60;h1&#62; Hello World! &#60;h1&#62;</h1>
+  				<h2 class="js-heading-fadeIn">&#60;h2&#62; I'am Anna Vihrogonova.<br>
+					<span class="typer" id="main" data-delim=":" data-words="Web Designer : Front-End Developer &#60;h2&#62;" data-colors="white" data-delay="200"></span>
+					<span class="cursor" data-cursorDisplay="|" data-owner="main"></span>
+				 </h2>
+				<a href="#" class="btn btn-inspect js-scroll-to-about-me">Inspect Me</a>
+				<a href="#" class="btn btn-hire js-scroll-to-hire-me">Hire Me</a>
 			</div>
 			<!-- End Header Text -->
 		</header>
 		<!-- End Header -->
 
 		<!-- Start About me section-->
-		<section class="section-about-me js-section-about-me">
-			 <img src="resource/css/img/wom3.png" id="about-me-animated" alt="woman">
+		<section class="section-about-me js-section-about-me" id="aboutMe">
+			 <img src="resource/css/img/wom3.png" id="about-me-animated" class="js-about-me-animated" alt="woman">
 			<div class="row">
 				<h3> About me </h3>
 			</div>
@@ -119,8 +125,8 @@
 		<!-- End About Me section -->
 
 		<!-- Start section Projects -->
-		<section class="section-projects">
-			<img src="resource/css/img/wom4.png" id="projects-animated" alt="woman">
+		<section class="section-projects js-section-projects" id="projects">
+			<img src="resource/css/img/wom4.png" id="projects-animated" class="js-projects-animated" alt="woman">
 			<div class="row projects">
 				<h3> Projects </h3>
 			</div>
@@ -192,12 +198,12 @@
 					<!-- </a> -->
 				</li>
 			</ul>
-			<img class="projects-animated-work" src="resource/css/img/wom5.png" alt="woman">
+			<img class="projects-animated-work js-projects-animated-work" src="resource/css/img/wom5.png" alt="woman">
 		</section>
 		<!-- End section Projects -->
 
 		<!-- Start Hire me section -->
-		<section class="section-hire-me">
+		<section class="section-hire-me js-section-hire-me" id="hireMe">
 			<div class="row">
 				<h3> Hire me </h3>
 			</div>
@@ -208,7 +214,7 @@
 			</div>
 			<div class="work-together">
 					<p>Let's work together!</p>
-					<img src="resource/css/img/wom6.png" alt="people" id="hire-me-animated">
+					<img src="resource/css/img/wom6.png" class="js-hire-me-animated" alt="people" id="hire-me-animated">
 				</div>
 			<div class="row">
 					<form method="post" action="#" class="hire-me-form">
@@ -296,7 +302,9 @@
 		</footer>
 		<!-- End Footer -->
 
+		<!-- All js scripts-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src='vendors/js/typer.js'></script>
 		<script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
