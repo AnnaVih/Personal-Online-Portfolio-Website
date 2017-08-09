@@ -143,6 +143,10 @@
     	margin-top: 80px;
     }
 
+	#projects-animated { top: 0; }
+
+    .my-projects li { width: 50%; }
+
 	.footer-nav,
 	.social-links {
 		float: none;
@@ -189,7 +193,7 @@
 
 	.section-projects { padding-bottom: 85px; }
 
-	.my-projects li { width: 50%; }
+	.my-projects li { width: 100%; }
 
 	#projects-animated { left: 30%; }
 

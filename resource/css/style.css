@@ -413,21 +413,15 @@ input[type=submit] { border: 1px solid #703688; }
 }
 
 .project-caption {
-	display: none;
+	width: 100%;
+	height: 50px;
+    background: rgba(0, 0, 0, .5);
 	position: absolute;
-	color: #dcb9e9;
-	bottom: 10%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.project-caption span {
-	color: white;
-	font-weight: 400;
-   letter-spacing: -1px;  
-   background: rgb(171, 71, 180); /* fallback color */
-   background: rgba(0, 0, 0, .7);
-   padding: 10px; 
+	bottom: 0;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-top: 10px;
 }
 
 .project img:hover {
@@ -437,7 +431,7 @@ input[type=submit] { border: 1px solid #703688; }
 }
 
 .project img:hover + .project-caption{ 
- display: block;
+ display: none;
 }
 
 .projects-animated-work {
