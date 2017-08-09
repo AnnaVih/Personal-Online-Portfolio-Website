@@ -412,18 +412,23 @@ input[type=submit] { border: 1px solid #703688; }
 	-moz-transition: all .5s;
 }
 
-/*.project-caption {
+.project-caption {
+	display: none;
 	position: absolute;
 	color: #dcb9e9;
-	top: 50%;
+	bottom: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.project-caption span {
+	color: white;
 	font-weight: 400;
-	text-transform: uppercase;
-	z-index: 1;
-	transition: all 2s;
-	text-shadow: 1px 1px 1px #000;
-}*/
+   letter-spacing: -1px;  
+   background: rgb(171, 71, 180); /* fallback color */
+   background: rgba(0, 0, 0, .7);
+   padding: 10px; 
+}
 
 .project img:hover {
 	opacity: 1;
@@ -431,7 +436,9 @@ input[type=submit] { border: 1px solid #703688; }
 	transform: scale(1.06);
 }
 
-/*.project img:hover + .project-caption{ z-index: -1;}*/
+.project img:hover + .project-caption{ 
+ display: block;
+}
 
 .projects-animated-work {
 	position: absolute;
