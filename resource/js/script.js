@@ -37,13 +37,14 @@ $(document).ready(function() {
 			$(this).addClass('animated bounceInDown');
 		});
 
-		// For ABOUT ME section
+		/* For ABOUT ME section*/
 		$('.js-about-me-animated').waypoint(function(direction) {
 			$('.js-about-me-animated').addClass('animated bounceInRight');
 		}, {
 			offset: '50%'
 		});
 
+		/* For PROJECTS section*/
 		$('.js-projects-animated').waypoint(function(direction) {
 			$('.js-projects-animated').addClass('animated bounceInLeft');
 		}, {
@@ -56,9 +57,31 @@ $(document).ready(function() {
 			offset: '50%'
 		});
 
+		/* For HIRE ME section*/
 		$('.js-hire-me-animated').waypoint(function(direction) {
 			$('.js-hire-me-animated').addClass('animated shake');
 		}, {
 			offset: '80%'
+		});
+
+		/* Mobile navigation */
+		$('.js-mobile-nav-icon').click(function() {
+			var nav = $('.js-main-nav');
+			var icon = $('.js-mobile-nav-icon i');
+
+			nav.slideToggle(200);
+			if(icon.hasClass('ion-navicon-round')) {
+				icon.addClass('ion-close-round');
+				icon.removeClass('ion-navicon-round');
+				
+			} else {
+				icon.addClass('ion-navicon-round');
+				icon.removeClass('ion-close-round')
+			}
+
+
+
+
+
 		});
 });
