@@ -168,18 +168,23 @@ input[type=submit] {
 	-o-transition: all .3s;
 }
 
+.btn-inspect:link,
+.btn-inspect:visited,
+.btn-hire:link,
+.btn-hire:visited,
+input[type=submit] {
+	border: 1px solid #8e44ad;
+}
 
 .btn-inspect:link,
 .btn-inspect:visited,
 input[type=submit]{
 	color: #fff;
-	border: 1px solid #8e44ad;
 	background-color: #8e44ad;
 }
 
 .btn-hire:link,
 .btn-hire:visited {
-	border: 1px solid #8e44ad;
 	color: #8e44ad;
 }
 
@@ -197,10 +202,10 @@ input[type=submit] {
 
 .btn-inspect:hover,
 .btn-inspect:active,
+.btn-hire:hover,
+.btn-hire:active,
 input[type=submit] { border: 1px solid #703688; }
 
-.btn-hire:hover,
-.btn-hire:active { border: 1px solid #703688; }
 
 /* ==============================================
 /* logo & NAVIGATION */
@@ -257,7 +262,9 @@ input[type=submit] { border: 1px solid #703688; }
 .main-nav li a:active { border-bottom: 2px solid #703688; }
 
 /* STICKY NAVIGATION */
-
+.sticky-nav .main-nav {
+	margin-top: 0;
+}
 .sticky-nav {
 	position: fixed;
 	top: 0;
