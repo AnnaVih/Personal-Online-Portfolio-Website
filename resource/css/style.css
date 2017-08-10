@@ -118,8 +118,8 @@ h4 { font-size: 110%; }
 
 
 .header {
-	background: -webkit-linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg.jpeg);
-	background: linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg.jpeg);
+	background: -webkit-linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg-min.jpeg);
+	background: linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7) ), url(img/bg-min.jpeg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
