@@ -208,7 +208,7 @@ input[type=submit] { border: 1px solid #703688; }
 
 
 .logo-white {
-	margin-top: 5px;
+	margin-top: 25px;
 	width: 160px;
 	height: 60px;
 	float: left;
@@ -227,6 +227,7 @@ input[type=submit] { border: 1px solid #703688; }
 /* MAIN NAVIGATION */
 
 .main-nav {
+	margin-top: 15px;
 	float: right;
 	list-style: none;
 }

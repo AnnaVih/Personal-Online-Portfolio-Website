@@ -97,7 +97,7 @@
 	.sticky-nav .mobile-nav-icon i {
 		color: #8e44ad;
 	    margin-top: 0; }
-
+	 .logo-white { margin-top: 5px; }
 	.logo-color { margin-top: 10px; }
 	.header-text-box h1 {font-size: 200%;}
 
@@ -171,6 +171,7 @@
 	}
 
 	.logo-white { 
+		margin-top: 5px;
 		width: 130px;
 	 }
 
