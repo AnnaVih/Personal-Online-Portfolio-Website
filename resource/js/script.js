@@ -1,5 +1,9 @@
 $(document).ready(function() {
+
+	/*---------------------------------
 	/* For the sticky navigation */
+	/*-------------------------------*/
+
 	$('.js-section-about-me').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('nav').addClass('sticky-nav');
@@ -10,7 +14,11 @@ $(document).ready(function() {
  		offset: '60px;'
 	});
 
-	/* Scroll on buttons */
+
+	/*---------------------------------- 
+	/* Scroll ON  BUTTONS */
+	/*--------------------------------*/
+
 	$('.js-scroll-to-about-me').click(function() {
 		$('html, body').animate({scrollTop: $('.js-section-about-me').offset().top}, 1000)
 	});
@@ -18,7 +26,11 @@ $(document).ready(function() {
 		$('html, body').animate({scrollTop: $('.js-section-hire-me').offset().top}, 1000)
 	});
 
+
+	/*----------------------------------
 	/* Navigation scroll */
+	/*--------------------------------*/
+
 	$(" a[href^='#']").on('click', function(e) {
    		e.preventDefault();
 	  	var hash = this.hash;
@@ -29,13 +41,18 @@ $(document).ready(function() {
 	    });
 	});
 
-	/* Animation */
-		//For HEADER
+
+	/* ---------------------------------
+	/*   Animation */
+	/*--------------------------------*/
+
+		/*  For HEADER  */
 		$('.js-heading-fadeIn').addClass('animated jackInTheBox');
 
 		$('.js-header-animated').delay(9000).queue(function() {
 			$(this).addClass('animated bounceInDown');
 		});
+
 
 		/* For ABOUT ME section*/
 		$('.js-about-me-animated').waypoint(function(direction) {
@@ -57,6 +74,19 @@ $(document).ready(function() {
 			offset: '50%'
 		});
 
+		/*For my projects*/
+		$('.js-project').mouseover(function() {
+			$(this).find('.js-project-caption').
+			removeClass('animated slideOutDown').
+			addClass('animated slideInUp');
+		});
+
+		$('.js-project').mouseout(function() {
+			$(this).find('.js-project-caption').
+			removeClass('animated slideInUp').
+			addClass('animated slideOutDown');
+		});
+
 		/* For HIRE ME section*/
 		$('.js-hire-me-animated').waypoint(function(direction) {
 			$('.js-hire-me-animated').addClass('animated shake');
@@ -64,7 +94,11 @@ $(document).ready(function() {
 			offset: '80%'
 		});
 
-		/* Mobile navigation */
+
+	/*-----------------------------------
+	/* Mobile navigation */
+	/*---------------------------------*/
+
 		$('.js-mobile-nav-icon').click(function() {
 			var nav = $('.js-main-nav');
 			var icon = $('.js-mobile-nav-icon i');
@@ -78,10 +112,5 @@ $(document).ready(function() {
 				icon.addClass('ion-navicon-round');
 				icon.removeClass('ion-close-round')
 			}
-
-
-
-
-
 		});
 });
