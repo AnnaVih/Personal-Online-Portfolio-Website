@@ -2,12 +2,17 @@
 @media only screen and (max-width: 1200px) {
 
 	.header-text-box {
-		width: 100%;
 		padding: 0 2%;
+		width: 100%;
 	}
 
 	.row { padding: 0 2%; }
-	#projects-animated { top: 5%; }
+	.projects-animated { top: 5%; }
+	.hire-me-animated {
+		bottom: 4%;
+		right: 8%;
+		width: 20%;
+	}
 
 }
 
@@ -22,44 +27,47 @@
 
 	h3:after {
 	height: 1px;
-	width: 70px;
 	margin-top: 20px;
+	width: 70px;
 	}
 
-	#header-animated { top: -60%; }
+	.header-animated { top: -60%; }
 
-	#about-me-animated {
-		width: 15%;
+	.about-me-animated {
 		right: 44%;
+		width: 15%;
 	}
 
 	.about { margin-top: 130px; }
 	.about img { width: 100%; }
 	.qualities{ margin-top: 100px; }
 
-	#projects-animated { 
-		top: 3%;
+	.projects-animated { 
 		left: 34%;
+		top: 3%;
 		width: 7%;
 	}
 
 	.projects-animated-work {
-		width: 15%;
 		left: 42%;
+		width: 15%;
 	}
 
-	#hire-me-animated {
-		width: 15%;
-		bottom: 1%;
-		right: 20%;
+	.hire-me-animated {
+		bottom: 5%;
+		right: 7%;
+		width: 20%;
 	}
 
 	.section-hire-me p {
-		width: 80%;
 		margin: 30px auto 0;
 	}
 
-	.hire-me-form { width: 90%; }
+	.hire-me-animated {
+		bottom: 3%;
+		left: 3%;
+		width: 25%;
+	}
 
 }
 
@@ -85,8 +93,8 @@
 	}
 	.main-nav li a:link,
 	.main-nav li a:visited {
-		display: block;
 		border: none;
+		display: block;
 		font-size: 100%;
 	}
 
@@ -107,18 +115,18 @@
 
 	h3:after {
 		height: 1px;
-		width: 70px;
 		margin-top: 20px;
+		width: 70px;
 	}
 
-	#header-animated {top: -43%;}
+	.header-animated {top: -43%;}
 
 	.about { margin-top: 100px; }
 
 	.about-me {
-		width: 90%;
 		margin-top: 40px;
 		text-align: initial;
+		width: 90%;
 	}
 
 	.about img { width: 60%; }
@@ -130,22 +138,49 @@
     .skills { width: 100%; }
 
     .skills div {
-    	width: 18%;
     	float: left;
+    	width: 18%;
     }
 
-    #about-me-animated {top: 6%;}
+    .about-me-animated {top: 6%;}
 
     .qualities {
-    	width: 48%;
     	float: left;
-    	text-align: center;
     	margin-top: 80px;
+    	text-align: center;
+    	width: 48%;
     }
 
-	#projects-animated { top: 0; }
+	.projects-animated { top: 0; }
 
     .my-projects li { width: 50%; }
+
+    .section-hire-me {
+		height: auto;
+		position: relative;
+		width: 100%;
+	}
+
+    .map {
+		height: 300px;
+		position: relative;
+		width: 100%;
+		z-index: 0;
+	}
+
+	.form-box {
+		height: auto;
+		margin-bottom: 20px;
+		padding-top: 30px;
+		position: relative;
+		width: 100%;
+	}
+
+	.hire-me-animated {
+		bottom: 1%;
+		left: 60%;
+		width: 15%;
+	}
 
 	.footer-nav,
 	.social-links {
@@ -166,8 +201,8 @@
 
 	h3:after {
 		height: 1px;
-		width: 70px;
 		margin-top: 10px;
+		width: 70px;
 	}
 
 	.logo-white { 
@@ -190,19 +225,19 @@
 
 	.header-text-box {margin-top: 15px;}
 
-	#header-animated { display: none; }
+	.header-animated { display: none; }
 
 	.section-projects { padding-bottom: 85px; }
 
 	.my-projects li { width: 100%; }
 
-	#projects-animated { left: 30%; }
+	.projects-animated { left: 30%; }
 
 	.projects-animated-work { bottom: 0; }
 
 	.section-hire-me p {
-		width: 100%;
 		margin-top: 10px;
+		width: 100%;
 	}
 
 	.hire-me-form { width: 100% }

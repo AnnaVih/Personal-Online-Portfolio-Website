@@ -20,10 +20,10 @@ $(document).ready(function() {
 	/*--------------------------------*/
 
 	$('.js-scroll-to-about-me').click(function() {
-		$('html, body').animate({scrollTop: $('.js-section-about-me').offset().top}, 1000)
+		$('html, body').animate({scrollTop: $('.js-section-about-me').offset().top}, 1000);
 	});
 	$('.js-scroll-to-hire-me').click(function() {
-		$('html, body').animate({scrollTop: $('.js-section-hire-me').offset().top}, 1000)
+		$('html, body').animate({scrollTop: $('.js-section-hire-me').offset().top}, 1000);
 	});
 
 
@@ -110,7 +110,29 @@ $(document).ready(function() {
 				
 			} else {
 				icon.addClass('ion-navicon-round');
-				icon.removeClass('ion-close-round')
+				icon.removeClass('ion-close-round');
+			}
+		});
+
+		/*-----------------------------------
+	/* MAP */
+	/*---------------------------------*/
+
+		var map = new GMaps({
+		    div: '.map',
+	        lat: 51.2627597,
+			lng: 0.82800484,
+			zoom: 9
+		});
+
+		map.addMarker({
+		  	lat: 51.2627597,
+		  	lng: 0.4500384,
+		  	title: 'Maidstone',
+		  	infoWindow: {
+		  	content: '<p>My place in Maidstone</p>'
 			}
 		});
 });
+
+	

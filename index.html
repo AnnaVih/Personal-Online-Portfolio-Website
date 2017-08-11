@@ -51,11 +51,11 @@
 			<!-- End Navigation -->
 			<!-- Start Header Text -->
 			<div class="header-text-box">
-			<img id="header-animated" class="js-header-animated" src="resource/css/img/header.png" alt="woman">
+			<img class="header-animated js-header-animated" src="resource/css/img/header.png" alt="woman">
 				<h1 class="js-heading-fadeIn">&#60;h1&#62; Hello World! &#60;h1&#62;</h1>
   				<h2 class="js-heading-fadeIn">&#60;h2&#62; I'am Anna Vihrogonova.<br>
 					<span class="typer" id="main" data-delim=":" data-words="Web Designer : Front-End Developer &#60;h2&#62;" data-colors="white" data-delay="200"></span>
-					<span class="cursor" data-cursorDisplay="|" data-owner="main"></span>
+					<span class="cursor" data-cursordisplay="|" data-owner="main"></span>
 				 </h2>
 				<a href="#" class="btn btn-inspect js-scroll-to-about-me">Inspect Me</a>
 				<a href="#" class="btn btn-hire js-scroll-to-hire-me">Hire Me</a>
@@ -66,7 +66,7 @@
 
 		<!-- Start About me section-->
 		<section class="section-about-me js-section-about-me" id="aboutMe">
-			 <img src="resource/css/img/wom3.png" id="about-me-animated" class="js-about-me-animated" alt="woman">
+			 <img src="resource/css/img/wom3.png" class="js-about-me-animated  about-me-animated" alt="woman">
 			<div class="row">
 				<h3> About me </h3>
 			</div>
@@ -137,7 +137,7 @@
 
 		<!-- Start section Projects -->
 		<section class="section-projects js-section-projects" id="projects">
-			<img src="resource/css/img/wom4.png" id="projects-animated" class="js-projects-animated" alt="woman">
+			<img src="resource/css/img/wom4.png"     class="js-projects-animated projects-animated" alt="woman">
 			<div class="row projects">
 				<h3> Projects </h3>
 			</div>
@@ -214,76 +214,87 @@
 		<!-- End section Projects -->
 
 		<!-- Start Hire me section -->
-		<section class="section-hire-me js-section-hire-me" id="hireMe">
-			<div class="row">
-				<h3> Hire me </h3>
-			</div>
-			<div class="row">
-				<p>
-					Are you looking for a professional, communicative Web designer/Front-End Developer? I'm available for hire on a freelance or contract basis. <br>For any futher info, to discuss a project or even if you just fancy a chat feel free to drop me a line below, thanks.
-				</p>
-			</div>
-			<div class="work-together">
-					<p>Let's work together!</p>
-					<img src="resource/css/img/wom6.png" class="js-hire-me-animated" alt="people" id="hire-me-animated">
+		<div class=" section-hire-me js-section-hire-me" id="hireMe">
+			<div class="map"></div>
+
+			<div class="form-box" id="form">
+				<div class="row">
+					<h3> Find me and Hire </h3>
 				</div>
-			<div class="row">
-					<form method="post" action="#" class="hire-me-form">
-						<div class="row">
-							<div class="col span-1-of-3">
-								<label for="name">Name</label>
-							</div>
-							<div class="col span-2-of-3">
-								<input type="text" name="name" id="name" placeholder="Your name" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col span-1-of-3">
-								<label for="email">Email</label>
-							</div>
-							<div class="col span-2-of-3">
-								<input type="text" name="email" id="email" placeholder="Your email" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col span-1-of-3">
-								<label for="company">Company</label>
-							</div>
-							<div class="col span-2-of-3">
-								<input type="text" name="company" id="company" placeholder="Company name">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col span-1-of-3">
-								<label for="find-me">How did you find me?</label>
-							</div>
-							<div class="col span-2-of-3">
-								<select name="find-me" id="find-me">
-									<option value="search" selected>Search engine</option>
-									<option value="friends">Friends</option>
-									<option value="other">Other</option>
-								</select>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col span-1-of-3">
-								<label>Drop me a line</label>
-							</div>
-							<div class="col span-2-of-3">
-								<textarea name="message" placeholder="Your message"></textarea>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col span-1-of-3">
-								<label>&nbsp;</label>
-							</div>
-							<div class="col span-2-of-3">
-								<input type="submit" value="Send it!">
-							</div>
-						</div>
-					</form>
+				<div class="row">
+					<p>
+						Are you looking for a professional, communicative Web designer/Front-End Developer? I'm available for hire on a freelance or contract basis. <br>For any futher info, to discuss a project or even if you just fancy a chat feel free to drop me a line below, thanks.
+					</p>
 				</div>
-		</section>
+				<div class="work-together">
+						<p>Let's work together!</p>
+						<img src="resource/css/img/wom6.png" class="js-hire-me-animated hire-me-animated" alt="people">
+					</div>
+				<div class="row">
+						<form method="post" action="#" class="hire-me-form">
+							<div class="row"></div>
+							<div class="form-message success">
+								Thank you! Your message has been sent.
+							</div>
+							<!-- <div class="form-message error">
+								Sorry! Something went wrong. Please try again!
+							</div> -->
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label for="name">Name</label>
+								</div>
+								<div class="col span-2-of-3">
+									<input type="text" name="name" id="name" placeholder="Your name" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label for="email">Email</label>
+								</div>
+								<div class="col span-2-of-3">
+									<input type="text" name="email" id="email" placeholder="Your email" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label for="company">Company</label>
+								</div>
+								<div class="col span-2-of-3">
+									<input type="text" name="company" id="company" placeholder="Company name">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label for="find-me">How did you find me?</label>
+								</div>
+								<div class="col span-2-of-3">
+									<select name="find-me" id="find-me">
+										<option value="search" selected>Search engine</option>
+										<option value="friends">Friends</option>
+										<option value="other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label>Drop me a line</label>
+								</div>
+								<div class="col span-2-of-3">
+									<textarea name="message" placeholder="Your message"></textarea>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label>&nbsp;</label>
+								</div>
+								<div class="col span-2-of-3">
+									<input type="submit" value="Send it!">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+		</div>
 		<!-- End Hire me section -->
 
 		<!-- Start Footer -->
@@ -291,9 +302,9 @@
 			<div class="row">
 				<div class="col span-1-of-2">
 					<ul class="footer-nav">
-						<li><a href="#">About Me</a></li>
-						<li><a href="#">Projects</a></li>
-						<li><a href="#">Hire Me</a></li>
+						<li><a href="#aboutMe">About Me</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#hireMe">Hire Me</a></li>
 					</ul>
 				</div>
 				<div class="col span-1-of-2">
@@ -314,12 +325,14 @@
 
 		<!-- All js scripts-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src='vendors/js/typer.js'></script>
+		<script src="vendors/js/typer.js"></script>
 		<script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
 		<script src="vendors/js/jquery.waypoints.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js"></script>
 		<script src="resource/js/script.js"></script>
+		<script src="resource/js/gmaps.js"></script>
 	</body>
 </html> 
 
