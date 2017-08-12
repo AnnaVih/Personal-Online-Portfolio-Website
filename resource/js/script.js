@@ -20,10 +20,10 @@ $(document).ready(function() {
 	/*--------------------------------*/
 
 	$('.js-scroll-to-about-me').click(function() {
-		$('html, body').animate({scrollTop: $('.js-section-about-me').offset().top}, 1000);
+		$('html, body').animate({scrollTop: $('.js-section-about-me').offset().top - 50}, 1000);
 	});
 	$('.js-scroll-to-hire-me').click(function() {
-		$('html, body').animate({scrollTop: $('.js-section-hire-me').offset().top}, 1000);
+		$('html, body').animate({scrollTop: $('.js-section-hire-me').offset().top - 60}, 1000);
 	});
 
 
@@ -35,7 +35,7 @@ $(document).ready(function() {
    		e.preventDefault();
 	  	var hash = this.hash;
 	    $('html, body').animate({
-	       scrollTop: $(hash).offset().top
+	       scrollTop: $(hash).offset().top - 50
 	    }, 1000, function(){
 	       window.location.hash = hash;
 	    });
