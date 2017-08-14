@@ -60,7 +60,7 @@ h1, h2, h3 , h4 {
 
 h3 {
 	color: #555;
-	font-size: 150%;
+	font-size: 125%;
 	margin-bottom: 40px;
 	text-align: center;
 }
@@ -79,7 +79,7 @@ h4 { font-size: 110%; }
 
 
 .header-text-box h1 {
-	font-size: 300%;
+	font-size: 250%;
 	margin: 0;
 }
 
@@ -468,7 +468,7 @@ input[type=submit] { border: 1px solid #703688; }
 
 .section-hire-me p ,
 .hire-me-form {
-	margin: 10px auto 0;
+	margin: 0 auto;
 	width: 90%;
 }
 
@@ -488,7 +488,9 @@ textarea { height: 100px; }
 
 .work-together {
 	font-weight: bold;
+	margin: 20px auto;
 	text-align: center;
+
 }
 
 .hire-me-animated {
