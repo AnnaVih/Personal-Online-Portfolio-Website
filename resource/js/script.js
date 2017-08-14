@@ -1,9 +1,8 @@
-$(document).ready(function() {
 
+$(document).ready(function() {
 	/*---------------------------------
 	/* For the sticky navigation */
 	/*-------------------------------*/
-
 	$('.js-section-about-me').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('nav').addClass('sticky-nav');
@@ -14,33 +13,17 @@ $(document).ready(function() {
  		offset: '60px;'
 	});
 
-
-	/*---------------------------------- 
-	/* Scroll ON  BUTTONS */
-	/*--------------------------------*/
-
-	$('.js-scroll-to-about-me').click(function() {
-		$('html, body').animate({scrollTop: $('.js-section-about-me').offset().top - 50}, 1000);
-	});
-	$('.js-scroll-to-hire-me').click(function() {
-		$('html, body').animate({scrollTop: $('.js-section-hire-me').offset().top - 60}, 1000);
-	});
-
-
 	/*----------------------------------
-	/* Navigation scroll */
+	/* Scroll on navigation and buttons */
 	/*--------------------------------*/
 
-	$(" a[href^='#']").on('click', function(e) {
-   		e.preventDefault();
-	  	var hash = this.hash;
-	    $('html, body').animate({
-	       scrollTop: $(hash).offset().top - 50
-	    }, 1000, function(){
-	       window.location.hash = hash;
-	    });
-	});
-
+	$("a[href^='#']").bind("click", function(e){
+		e.preventDefault();
+  	var anchor = $(this);
+  	$('html, body').stop().animate({
+    	scrollTop: $(anchor.attr('href')).offset().top-50
+  	}, 1000);
+  	});
 
 	/* ---------------------------------
 	/*   Animation */
@@ -114,7 +97,7 @@ $(document).ready(function() {
 			}
 		});
 
-		/*-----------------------------------
+	/*-----------------------------------
 	/* MAP */
 	/*---------------------------------*/
 
