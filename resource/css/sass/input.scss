@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,300i,400');
 
-$main-color:    #555555;
-
+$emperor:  	    #555555;
 $white:         #FFFFFF;
 $black:         #000000;
 $gray:          #888888;
@@ -19,6 +19,10 @@ $chambray:      #3B5998;
 $gallery:       #EFEFEF;
 $silver:        #CCCCCC;
 
+$main-color:	$emperor;
+
+$font-main: Lato, Arial, sans-serif;
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -29,12 +33,12 @@ $silver:        #CCCCCC;
 body,
 html {
     color: $main-color;
-    font-family: Lato, Arial, sans-serif;
+    font-family: $font-main;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.5;
     overflow-x: hidden;
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
 }
 
 .clearfix {
