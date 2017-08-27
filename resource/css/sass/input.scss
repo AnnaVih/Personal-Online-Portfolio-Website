@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,300i,400');
+@import 'media-query';
 ////////////////////////////////////////////
 $emperor:  	    #555555;
 $white:         #FFFFFF;
@@ -139,10 +140,11 @@ footer p {
 }
 //////////////////////////////////////////////////////////////////
 .header {
+	background: url(../img/bg-min.jpeg), linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7));
     background: -moz-linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7));
     background: -o-linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7));
     background: -webkit-linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7));
-    background: linear-gradient(rgba(171, 71, 180, .2), rgba(0, 0, 0, .7)), url(../img/bg-min.jpeg);
+    
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -633,4 +635,9 @@ input[type=submit] {
 .js-projects-animated.animated {
     opacity: 1;
 }
+
+
+
+
+/////////////////////////////////////////////////
 
