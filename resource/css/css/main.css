@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,300i,400");
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
@@ -35,6 +35,7 @@ html {
 section {
   padding: 70px 0; }
 
+/* Headings */
 h1,
 h2,
 h3,
@@ -648,8 +649,6 @@ input[type=submit] {
     width: 20%; } }
 
 @media only screen and (max-width: 1023px) {
-  body {
-    font-size: 18px; }
   section {
     padding: 35px 0; }
   h3:after {
@@ -684,8 +683,6 @@ input[type=submit] {
     width: 25%; } }
 
 @media only screen and (max-width: 767px) {
-  body {
-    font-size: 17px; }
   section {
     padding: 20px; }
   .header-text-box,
