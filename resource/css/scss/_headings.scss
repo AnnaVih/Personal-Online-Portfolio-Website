@@ -1,0 +1,43 @@
+/* =========== Headings ================ */
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    word-spacing: 1px;
+}
+
+h3 {
+    color: $main-color;
+    font-size: 125%;
+    margin-bottom: 40px;
+    text-align: center;
+
+	&:after {
+	    background-color: $purple;
+	    content: "";
+	    display: block;
+	    height: 2px;
+	    margin: 15px auto 0;
+	    width: 100px;
+	}
+}
+
+h4 {
+    font-size: 110%
+}
+
+
+.header-text-box h1 {
+    font-size: 250%;
+    margin: 0;
+}
+
+.header-text-box h1,
+.header-text-box h2 {
+    color: $white;
+    text-transform: none;
+}
