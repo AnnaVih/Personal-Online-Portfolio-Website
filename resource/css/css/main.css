@@ -1,3 +1,4 @@
+/* Load Fonts */
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,300i,400");
 /*  SECTIONS  ============================================================================= */
 .section {
@@ -1251,7 +1252,7 @@ input[type=submit]:hover {
     list-style: none; }
     .footer-nav li a:active,
     .footer-nav li a:hover {
-      color: #DDDDDD; }
+      color: #bbbbbb; }
   .footer .social-links {
     float: right;
     list-style: none; }

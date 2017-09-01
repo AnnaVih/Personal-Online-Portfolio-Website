@@ -1,30 +1,31 @@
+/* Load Fonts */
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,300i,400');
 
-// Color Names
-$emperor:  	    #555555;
-$white:         #FFFFFF;
-$black:         #000000;
-$grey:          #888888;
-$alto:          #DDDDDD;
-$purple:        #8E44AD;
-$studio:		#ab47b4;
-$eminence:      #703688;
-$cinnabar:      #E44D26;
-$denim:         #1B73BA;
-$ripelemon:     #F7DF1E;
-$wildsand:      #F4F4F4;
-$hopbush:       #CF649A;
-$mineshaft:     #333333;
-$deepcarulean:  #007BB5;
-$pictonblue:    #55ACEE;
-$chambray:      #3B5998;
-$gallery:       #EFEFEF;
-$silver:        #CCCCCC;
+// Color variables
+$emperor:  	    	#555555;
+$white:         	#FFFFFF;
+$black:         	#000000;
+$grey:          	#888888;
+$purple:        	#8E44AD;
+$studio:			#ab47b4;
+$cinnabar:      	#E44D26;
+$denim:         	#1B73BA;
+$ripelemon:     	#F7DF1E;
+$wildsand:      	#F4F4F4;
+$hopbush:       	#CF649A;
+$mineshaft:     	#333333;
+$deepcarulean:  	#007BB5;
+$pictonblue:    	#55ACEE;
+$chambray:      	#3B5998;
+$gallery:       	#EFEFEF;
+$silver:       		#CCCCCC;
 
-$main-color:	$emperor;
-$projects-bg: 	$wildsand;
-$button: 		$purple;
-$footer_link:   $grey;
+$main-color:		$emperor;
+$projects-bg: 		$wildsand;
+$button: 			$purple;
+$button-on-hover: 	darken($button, 10%);
+$footer-link:   	$grey;
+$footer-link-hover:	lighten($grey, 20%);
 
-
+// Font variable
 $font-main: Lato, Arial, sans-serif;
