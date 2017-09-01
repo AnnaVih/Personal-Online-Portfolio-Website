@@ -41,7 +41,7 @@
     }
 
     h3:after {
-        @include marginT_width(20px, 70px);
+        @include margin_width($marginTop: 20px, $width: 70px);
         height: 1px;
     }
 
@@ -192,7 +192,7 @@
          }
 
         &-me {
-            @include marginT_width(40px, 90%);
+            @include margin_width($marginTop: 40px, $width: 90%);
             text-align: initial;
         }
     
@@ -211,7 +211,7 @@
     }
    
     .qualities {
-        @include marginT_width(80px, 48%);
+        @include margin_width($marginTop: 80px, $width: 48%);
         float: left;
         text-align: center;
     }
@@ -275,7 +275,7 @@
         font-size: 110%;
 
         &:after {
-            @include marginT_width(10px, 70px);
+            @include margin_width($marginTop: 10px, $width: 70px);
             height: 1px;
         }
     }
@@ -285,7 +285,7 @@
     }
    
     .header .logo-white {
-        @include marginT_width(5px, 130px);
+        @include margin_width($marginTop: 5px, $width: 130px);
     }
 
     .main-nav li {
@@ -328,7 +328,7 @@
     }
 
     .section-hire-me p {
-        @include marginT_width(10px, 100%);
+        @include margin_width($marginTop: 10px);
     }
 
     .hire-me-form {
