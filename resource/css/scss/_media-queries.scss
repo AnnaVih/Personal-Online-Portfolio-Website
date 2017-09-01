@@ -41,9 +41,8 @@
     }
 
     h3:after {
+        @include marginT_width(20px, 70px);
         height: 1px;
-        margin-top: 20px;
-        width: 70px
     }
 
     .header-animated {
@@ -118,12 +117,6 @@
 
     h3 {
         font-size: 130%;
-
-        &:after {
-            height: 1px;
-            margin-top: 20px;
-            width: 70px
-        }
     }
 
     h4 {
@@ -178,11 +171,11 @@
             margin-top: 10px
         }
 
-        .header-animated {
+        &-animated {
             top: -43%
         }
 
-        .header-text-box h1 {
+        &-text-box h1 {
             font-size: 200%
         }
     }
@@ -198,16 +191,15 @@
             width: 60%;
          }
 
-        .about-me {
-            margin-top: 40px;
+        &-me {
+            @include marginT_width(40px, 90%);
             text-align: initial;
-            width: 90%
         }
     
         .skills {
             width: 100%;
 
-            .skills-icon {
+            &-icon {
                 font-size: 250%
             }
 
@@ -219,10 +211,9 @@
     }
    
     .qualities {
+        @include marginT_width(80px, 48%);
         float: left;
-        margin-top: 80px;
         text-align: center;
-        width: 48%
     }
 
     .section-projects .projects-animated {
@@ -237,10 +228,8 @@
         height: auto;
 
         .form-box,
-        .map,
-        .section-hire-me {
-            position: relative;
-            width: 100%
+        .map {
+            @include position(100%, relative);
         }
 
         .map {
@@ -286,9 +275,8 @@
         font-size: 110%;
 
         &:after {
+            @include marginT_width(10px, 70px);
             height: 1px;
-            margin-top: 10px;
-            width: 70px
         }
     }
 
@@ -297,8 +285,7 @@
     }
    
     .header .logo-white {
-        margin-top: 5px;
-        width: 130px
+        @include marginT_width(5px, 130px);
     }
 
     .main-nav li {
@@ -341,8 +328,7 @@
     }
 
     .section-hire-me p {
-        margin-top: 10px;
-        width: 100%
+        @include marginT_width(10px, 100%);
     }
 
     .hire-me-form {
