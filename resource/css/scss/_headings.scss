@@ -17,12 +17,11 @@ h3 {
     text-align: center;
 
 	&:after {
+        @include margin_width(15px auto 0, $width: 100px);
 	    background-color: $purple;
 	    content: "";
 	    display: block;
 	    height: 2px;
-	    margin: 15px auto 0;
-	    width: 100px;
 	}
 }
 
