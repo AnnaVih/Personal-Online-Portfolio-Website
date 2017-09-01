@@ -910,12 +910,12 @@ h3 {
   margin-bottom: 40px;
   text-align: center; }
   h3:after {
+    margin: 15px auto 0;
+    width: 100px;
     background-color: #8E44AD;
     content: "";
     display: block;
-    height: 2px;
-    margin: 15px auto 0;
-    width: 100px; }
+    height: 2px; }
 
 h4 {
   font-size: 110%; }
@@ -987,9 +987,9 @@ h4 {
     display: none; }
 
 /* =============  Buttons ==============================*/
-.btn:link,
-.btn:visited,
-input[type=submit] {
+.btn-inspect:link,
+.btn-inspect:visited, .btn-hire:link,
+.btn-hire:visited, input[type=submit] {
   border-radius: 5px;
   display: inline-block;
   font-weight: 300;
@@ -1000,29 +1000,19 @@ input[type=submit] {
   -webkit-transition: all .3s;
   transition: all .3s; }
 
-.btn-hire:link,
-.btn-hire:visited,
 .btn-inspect:link,
-.btn-inspect:visited,
-input[type=submit] {
+.btn-inspect:visited, .btn-hire:link,
+.btn-hire:visited, input[type=submit] {
   border: 1px solid #8E44AD; }
 
 .btn-inspect:link,
-.btn-inspect:visited,
-input[type=submit] {
+.btn-inspect:visited, input[type=submit] {
   background-color: #8E44AD;
   color: #FFFFFF; }
 
 .btn-hire:link,
 .btn-hire:visited {
   color: #8E44AD; }
-
-.btn:active,
-.btn:hover,
-input[type=submit]:active,
-input[type=submit]:hover {
-  background-color: #703688;
-  color: #FFFFFF; }
 
 input[type=submit] {
   cursor: pointer; }
@@ -1031,8 +1021,11 @@ input[type=submit] {
 .btn-hire:hover,
 .btn-inspect:active,
 .btn-inspect:hover,
-input[type=submit] {
-  border: 1px solid #703688; }
+input[type=submit]:active,
+input[type=submit]:hover {
+  border: 1px solid #703688;
+  background-color: #703688;
+  color: #FFFFFF; }
 
 /* ============= Main navigation ========================*/
 .main-nav {
@@ -1324,6 +1317,7 @@ input[type=submit] {
   section {
     padding: 35px 0; }
   h3:after {
+    margin: 0 auto;
     margin-top: 20px;
     width: 70px;
     height: 1px; }
@@ -1409,6 +1403,7 @@ input[type=submit] {
     .about img {
       width: 60%; }
     .about-me {
+      margin: 0 auto;
       margin-top: 40px;
       width: 90%;
       text-align: initial; }
@@ -1420,6 +1415,7 @@ input[type=submit] {
         float: left;
         width: 18%; }
   .qualities {
+    margin: 0 auto;
     margin-top: 80px;
     width: 48%;
     float: left;
@@ -1460,12 +1456,14 @@ input[type=submit] {
   h3 {
     font-size: 110%; }
     h3:after {
+      margin: 0 auto;
       margin-top: 10px;
       width: 70px;
       height: 1px; }
   h4 {
     font-size: 95%; }
   .header .logo-white {
+    margin: 0 auto;
     margin-top: 5px;
     width: 130px; }
   .main-nav li {
@@ -1489,6 +1487,7 @@ input[type=submit] {
     .section-projects .projects-animated-work {
       bottom: 0; }
   .section-hire-me p {
+    margin: 0 auto;
     margin-top: 10px;
     width: 100%; }
   .hire-me-form {
