@@ -134,9 +134,9 @@ input[type=submit]:hover{
 		a:active,
 		a:hover {
     		border-bottom: 2px solid $button-on-hover;
-		}
-	}
-}
+		}//a
+	}//li
+}//.main-nav
 
 /* ============= Sticky navigation =======================*/
 
@@ -157,9 +157,9 @@ input[type=submit]:hover{
 			a:visited {
 			    color: $main-color;
 			    padding: 17px 0
-			}
-		}
-	}
+			}//a
+		}//li
+	}//.main-nav
 
 	.logo-white {
     	display: none;
@@ -169,7 +169,7 @@ input[type=submit]:hover{
     	display: block;
 	}
 
-}
+}//.sticky-nav
 
 /* =============  Mobile navigation icon ==================*/
 
@@ -230,9 +230,8 @@ input[type=submit]:hover{
 		    color: $mineshaft;
 		}
 
-	}	
-		
-}
+	}//skills		
+}//.about
 
 .qualities {
 	margin-top: 150px;
@@ -278,7 +277,7 @@ input[type=submit]:hover{
 			    background-color: $black;
 			    width: 100%;
 			}
-		}
+		}//li
 
 		.project {
 		    margin: 0;
@@ -294,7 +293,7 @@ input[type=submit]:hover{
 				   opacity: 1;
 				   transform: scale(1.06);
 				}
-			}
+			}//img
 
 			.project-caption {
 				@include position(100%, absolute, $bottom: 0, $left: 0, $height: 60px);
@@ -303,16 +302,15 @@ input[type=submit]:hover{
 			    font-weight: 300;
 			    padding: 15.5px;
 			    text-transform: uppercase;
-			}
-		}
-
-	}
+			}//.project-caption
+		}//.project
+	}//.my-projects
 
 	.projects-animated-work {
 		@include position(8%, absolute, $bottom: 3%, $left: 45.5%);
 	}
 
-}
+}//.section-projects
 
 /* =============  Section Hire me ==================*/
 
@@ -354,13 +352,13 @@ input[type=submit]:hover{
 		textarea {
 		    height: 100px
 		}
-	}
+	}//.form-box
 
 	.hire-me-animated {
 		@include position(15%, absolute, $bottom: 8%, $left: 75%);
-		}
+	}
 
-}
+}//.section-hire-me
 /* =============  Footer ==================*/
 
 .footer {
@@ -371,7 +369,7 @@ input[type=submit]:hover{
     p {
 	    color: $grey;
 	    margin-top: 10px;
-	}
+	}//p
 
 	&-nav li,
 	.social-links li {
@@ -389,7 +387,7 @@ input[type=submit]:hover{
 		    text-decoration: none;
 		}
 
-	}
+	}//li
 
 	&-nav {
 	    float: left;
@@ -399,7 +397,7 @@ input[type=submit]:hover{
 		li a:hover {
 		    color: $footer-link-hover;
 		}
-	}
+	}//&-nav
 
 	.social-links {
 	    float: right;
@@ -432,9 +430,8 @@ input[type=submit]:hover{
 		.ion-social-github-outline:hover {
 		    color: $black;
 		}
-	}
-
-}
+	}//social-links
+}//.footer
 
 .js-about-me-animated,
 .js-header-animated,

@@ -32,6 +32,7 @@
 
 @media only screen and (max-width:1023px) {
 
+    //Base
     body {
         font-size: 18px
     }
@@ -45,10 +46,12 @@
         height: 1px;
     }
 
+    //Header
     .header-animated {
         top: -60%
     }
 
+    //About me section
     .about-me-animated {
         right: 44%;
         width: 15%
@@ -66,6 +69,8 @@
         margin-top: 100px
     }
 
+
+    //Projects section
     .projects-animated {
         left: 34%;
         top: 1%;
@@ -77,6 +82,7 @@
         width: 18%
     }
 
+    //Hire me section
     .section-hire-me {
         padding-bottom: 20px;
        
@@ -88,12 +94,13 @@
             bottom: 3%;
             left: 3%;
             width: 25%
-        }
-    }
-}
+        }//.hire-me-animated
+    }//.section-hire-me
+}//@media
 
 @media only screen and (max-width:767px) {
 
+    //Base
     body {
         font-size: 17px
     }
@@ -111,6 +118,7 @@
          width: 100%
      }
 
+    //Headings
     h2 {
         font-size: 140%
     }
@@ -123,7 +131,7 @@
         font-size: 100%
     }
     
-
+    //Main navigation
     .main-nav {
         display: none;
         float: left;
@@ -142,11 +150,12 @@
         }
     }
 
+    //Mobile navigation
     .mobile-nav-icon {
         display: inline-block
     }
     
-   
+   //Sticky navigation
     .sticky-nav .main-nav li {
         margin: 10px;
         a:link,
@@ -159,7 +168,8 @@
         color: $purple;
         margin-top: 0
     }
-       
+      
+    //Header 
     .header {
         background-size: auto;
 
@@ -180,6 +190,7 @@
         }
     }
 
+    //About me section
     .about-me-animated {
         top: 6%;
     }
@@ -206,9 +217,9 @@
             div {
                 float: left;
                 width: 18%;
-            }
-        }
-    }
+            }//div
+        }//.skills
+    }//.about
    
     .qualities {
         @include margin_width($marginTop: 80px, $width: 48%);
@@ -216,6 +227,7 @@
         text-align: center;
     }
 
+    //Section projects
     .section-projects .projects-animated {
         top: 0
     }
@@ -224,6 +236,7 @@
         width: 50%
     }
    
+    //Section hire me
     .section-hire-me {
         height: auto;
 
@@ -247,22 +260,24 @@
             bottom: 1%;
             left: 60%;
             width: 15%
-        }
-    }
+        }//.hire-me-animated
+    }//.section-hire-me
 
     .footer .footer-nav,
     .footer .social-links {
         float: none;
         text-align: center
     }
-}
+}//@media
 
 @media only screen and (max-width:480px) {
-
+    //Base
     section {
         padding: 15px 0
     }
 
+
+//Headings
     .header .header-text-box h1 {
         font-size: 140%
     }
@@ -283,7 +298,8 @@
     h4 {
         font-size: 95%
     }
-   
+
+    //Header
     .header .logo-white {
         @include margin_width($marginTop: 5px, $width: 130px);
     }
@@ -310,6 +326,7 @@
         }
     }
 
+    //Section projcts
     .section-projects {
         padding-bottom: 85px;
 
@@ -327,6 +344,7 @@
         }
     }
 
+    //Section hire me
     .section-hire-me p {
         @include margin_width($marginTop: 10px);
     }
