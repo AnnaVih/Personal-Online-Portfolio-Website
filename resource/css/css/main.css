@@ -1365,25 +1365,26 @@ input[type=submit]:hover {
     font-size: 130%; }
   h4 {
     font-size: 100%; }
-  .main-nav {
-    display: none;
-    float: left;
-    margin-left: 15px; }
-    .main-nav li {
-      display: block;
-      margin-top: 8px; }
-      .main-nav li a:link,
-      .main-nav li a:visited {
-        border: none;
-        display: block;
-        font-size: 100%; }
+  nav {
+    background-color: #8E44AD; }
+    nav .main-nav {
+      display: none;
+      float: left; }
+      nav .main-nav li {
+        margin: 10px; }
+        nav .main-nav li a:link,
+        nav .main-nav li a:visited {
+          border: none;
+          font-size: 100%;
+          padding: 5px 0; }
   .mobile-nav-icon {
     display: inline-block; }
   .sticky-nav .main-nav li {
-    margin: 10px; }
+    display: block; }
     .sticky-nav .main-nav li a:link,
     .sticky-nav .main-nav li a:visited {
-      padding: 8px 0; }
+      padding: 5px 0;
+      display: block; }
   .sticky-nav .mobile-nav-icon i {
     color: #8E44AD;
     margin-top: 0; }
@@ -1394,7 +1395,7 @@ input[type=submit]:hover {
     .header .logo-color {
       margin-top: 10px; }
     .header-animated {
-      top: -43%; }
+      display: none; }
     .header-text-box h1 {
       font-size: 200%; }
   .about-me-animated {
@@ -1467,17 +1468,20 @@ input[type=submit]:hover {
     margin: 0 auto;
     margin-top: 5px;
     width: 130px; }
-  .main-nav li {
-    margin-left: 5px; }
-    .main-nav li a:link,
-    .main-nav li a:visited {
-      padding: 2px 0; }
+  .main-nav {
+    margin-top: 5px;
+    margin-left: 0; }
+    .main-nav li {
+      margin-left: 3px;
+      margin-top: 20px;
+      display: block; }
+      .main-nav li a:link,
+      .main-nav li a:visited {
+        display: block; }
   .sticky-nav .main-nav {
     margin-left: 0; }
   .header-text-box {
     margin-top: 15px; }
-    .header-text-box .header-animated {
-      display: none; }
   .section-projects {
     padding-bottom: 85px; }
     .section-projects .my-projects li {

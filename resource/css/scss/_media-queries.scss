@@ -132,23 +132,24 @@
     }
     
     //Main navigation
-    .main-nav {
-        display: none;
-        float: left;
-        margin-left: 15px;
+    nav {
+        background-color: $purple;
+        .main-nav {
+            display: none;
+            float: left;
 
-        li {
-            display: block;
-            margin-top: 8px;
+            li {
+                margin: 10px;
 
-            a:link,
-            a:visited {
-                border: none;
-                display: block;
-                font-size: 100%
-            }
-        }
-    }
+                a:link,
+                a:visited {
+                    border: none;
+                    font-size: 100%;
+                     padding: 5px 0;
+                }//a
+            }//li
+        }//.main-nav
+    }//nav
 
     //Mobile navigation
     .mobile-nav-icon {
@@ -157,10 +158,11 @@
     
    //Sticky navigation
     .sticky-nav .main-nav li {
-        margin: 10px;
+        display: block;
         a:link,
         a:visited {
-            padding: 8px 0
+            padding: 5px 0;
+            display: block;
         }
     }
 
@@ -182,7 +184,7 @@
         }
 
         &-animated {
-            top: -43%
+            display: none;
         }
 
         &-text-box h1 {
@@ -304,26 +306,30 @@
         @include margin_width($marginTop: 5px, $width: 130px);
     }
 
-    .main-nav li {
-        margin-left: 5px;
+    .main-nav{
+        margin-top: 5px;
+        margin-left: 0;
 
-        a:link,
-        a:visited {
-            padding: 2px 0
+         li {
+            margin-left: 3px;
+            margin-top: 20px;
+            display: block;
+
+            a:link,
+            a:visited {
+                display: block;
+            }
         }
     }
 
     .sticky-nav .main-nav {
         margin-left: 0
+
     }
 
     
     .header-text-box {
         margin-top: 15px;
-    
-        .header-animated {
-            display: none
-        }
     }
 
     //Section projcts
@@ -357,4 +363,4 @@
         bottom: 0;
         width: 30%
     }
-}
+}//@media
