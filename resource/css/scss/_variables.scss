@@ -28,4 +28,11 @@ $footer-link:   	$grey;
 $footer-link-hover:	lighten($grey, 20%);
 
 // Font variable
-$font-main: Lato, Arial, sans-serif;
+$font-main: 		Lato, Arial, sans-serif;
+$font-size-main:	20px;
+
+//Breakpoint variables
+$phone: 			480px;
+$phone-landscape:	767px;
+$tablets:			1023px;
+$md-Desctops:		1200px;
