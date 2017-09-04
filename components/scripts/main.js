@@ -1,1 +1,118 @@
-$(document).ready(function(){$(".js-section-about-me").waypoint(function(a){"down"==a?$("nav").addClass("sticky-nav"):$("nav").removeClass("sticky-nav")},{offset:"60px;"}),$("a[href^='#']").bind("click",function(a){a.preventDefault();var n=$(this);$("html, body").stop().animate({scrollTop:$(n.attr("href")).offset().top-50},1e3)}),$(".js-heading-fadeIn").addClass("animated jackInTheBox"),$(".js-header-animated").delay(9e3).queue(function(){$(this).addClass("animated bounceInDown")}),$(".js-about-me-animated").waypoint(function(a){$(".js-about-me-animated").addClass("animated bounceInRight")},{offset:"50%"}),$(".js-projects-animated").waypoint(function(a){$(".js-projects-animated").addClass("animated bounceInLeft")},{offset:"50%"}),$(".projects-animated-work").waypoint(function(a){$(".projects-animated-work").addClass("animated zoomInDown")},{offset:"50%"}),$(".js-project").mouseover(function(){$(this).find(".js-project-caption").removeClass("animated slideOutDown").addClass("animated slideInUp")}),$(".js-project").mouseout(function(){$(this).find(".js-project-caption").removeClass("animated slideInUp").addClass("animated slideOutDown")}),$(".js-hire-me-animated").waypoint(function(a){$(".js-hire-me-animated").addClass("animated shake")},{offset:"80%"}),$(".js-mobile-nav-icon").click(function(){var a=$(".js-main-nav"),n=$(".js-mobile-nav-icon i");a.slideToggle(200),n.hasClass("ion-navicon-round")?(n.addClass("ion-close-round"),n.removeClass("ion-navicon-round")):(n.addClass("ion-navicon-round"),n.removeClass("ion-close-round"))}),new GMaps({div:".map",lat:51.2627597,lng:.82800484,zoom:9}).addMarker({lat:51.2627597,lng:.4500384,title:"Maidstone",infoWindow:{content:"<p>My place in Maidstone</p>"}})});
+$(document).ready(function() {
+	/*---------------------------------
+	/* For the sticky navigation */
+	/*-------------------------------*/
+	$('.js-section-about-me').waypoint(function(direction) {
+		if(direction == 'down') {
+			$('nav').addClass('sticky-nav');
+		}else {
+			$('nav').removeClass('sticky-nav');
+		}
+	},  {
+ 		offset: '60px;'
+	});
+
+	/*----------------------------------
+	/* Scroll on navigation and buttons */
+	/*--------------------------------*/
+
+	$("a[href^='#']").bind("click", function(e){
+		e.preventDefault();
+  	var anchor = $(this);
+  	$('html, body').stop().animate({
+    	scrollTop: $(anchor.attr('href')).offset().top-50
+  	}, 1000);
+  	});
+
+	/* ---------------------------------
+	/*   Animation */
+	/*--------------------------------*/
+
+		/*  For HEADER  */
+		$('.js-heading-fadeIn').addClass('animated jackInTheBox');
+
+		$('.js-header-animated').delay(9000).queue(function() {
+			$(this).addClass('animated bounceInDown');
+		});
+
+
+		/* For ABOUT ME section*/
+		$('.js-about-me-animated').waypoint(function(direction) {
+			$('.js-about-me-animated').addClass('animated bounceInRight');
+		}, {
+			offset: '50%'
+		});
+
+		/* For PROJECTS section*/
+		$('.js-projects-animated').waypoint(function(direction) {
+			$('.js-projects-animated').addClass('animated bounceInLeft');
+		}, {
+			offset: '50%'
+		});
+
+		$('.projects-animated-work').waypoint(function(direction) {
+			$('.projects-animated-work').addClass('animated zoomInDown');
+		}, {
+			offset: '50%'
+		});
+
+		/*For my projects*/
+		$('.js-project').mouseover(function() {
+			$(this).find('.js-project-caption').
+			removeClass('animated slideOutDown').
+			addClass('animated slideInUp');
+		});
+
+		$('.js-project').mouseout(function() {
+			$(this).find('.js-project-caption').
+			removeClass('animated slideInUp').
+			addClass('animated slideOutDown');
+		});
+
+		/* For HIRE ME section*/
+		$('.js-hire-me-animated').waypoint(function(direction) {
+			$('.js-hire-me-animated').addClass('animated shake');
+		}, {
+			offset: '80%'
+		});
+
+
+	/*-----------------------------------
+	/* Mobile navigation */
+	/*---------------------------------*/
+
+		$('.js-mobile-nav-icon').click(function() {
+			var nav = $('.js-main-nav');
+			var icon = $('.js-mobile-nav-icon i');
+
+			nav.slideToggle(200);
+			if(icon.hasClass('ion-navicon-round')) {
+				icon.addClass('ion-close-round');
+				icon.removeClass('ion-navicon-round');
+				
+			} else {
+				icon.addClass('ion-navicon-round');
+				icon.removeClass('ion-close-round');
+			}
+		});
+
+	/*-----------------------------------
+	/* MAP */
+	/*---------------------------------*/
+
+		var map = new GMaps({
+		    div: '.map',
+	        lat: 51.2627597,
+			lng: 0.82800484,
+			zoom: 9
+		});
+
+		map.addMarker({
+		  	lat: 51.2627597,
+		  	lng: 0.4500384,
+		  	title: 'Maidstone',
+		  	infoWindow: {
+		  	content: '<p>My place in Maidstone</p>'
+			}
+		});
+});
