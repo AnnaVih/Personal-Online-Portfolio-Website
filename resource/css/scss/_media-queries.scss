@@ -1,6 +1,6 @@
 /*========== Media-queries =============*/
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:$md-Desctops) {
 
     .header .header-text-box {
         padding: 0 2%;
@@ -30,7 +30,7 @@
     }
 }
 
-@media only screen and (max-width:1023px) {
+@media only screen and (max-width:$tablets) {
 
     //Base
     body {
@@ -98,7 +98,7 @@
     }//.section-hire-me
 }//@media
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width:$phone-landscape) {
 
     //Base
     body {
@@ -272,14 +272,14 @@
     }
 }//@media
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:$phone) {
     //Base
     section {
         padding: 15px 0
     }
 
 
-//Headings
+	//Headings
     .header .header-text-box h1 {
         font-size: 140%
     }
