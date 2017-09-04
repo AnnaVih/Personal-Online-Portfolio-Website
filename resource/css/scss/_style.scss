@@ -27,7 +27,8 @@
 /* ======================  Header ===========================*/
 
 .header {
-    background:  linear-gradient(to bottom, rgba($studio, .2), rgba($black, .7)), url(../img/bg-min.jpeg);
+	background-image: url(../img/bg-min.jpeg);//fallback
+    background:  linear-gradient(to bottom, $linearStart, $linearStop), url(../img/bg-min.jpeg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
