@@ -23,10 +23,3 @@
 }
 
 
-@mixin mediaQuery($arg) {
-	@media only screen and (max-width: $arg) {
-		@content;
-	}
-}
-
-
