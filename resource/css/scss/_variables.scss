@@ -26,6 +26,8 @@ $button: 			$purple;
 $button-on-hover: 	darken($button, 10%);
 $footer-link:   	$grey;
 $footer-link-hover:	lighten($grey, 20%);
+$linearStart:		rgba($studio, .2);
+$linearStop:		rgba($black, .7);
 
 // Font variable
 $font-main: 		Lato, Arial, sans-serif;
