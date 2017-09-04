@@ -1,13 +1,20 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
+var gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	browserSync = require('browser-sync').create(),
+	autoprefixer = require('gulp-autoprefixer'),
+	sourcemaps = require('gulp-sourcemaps'),
+	concat = require('gulp-concat');
+
+var jsSources = ['components/scripts/gmaps.js',
+	'components/scripts/jquery.waypoints.min.js',
+	'components/scripts/typer.js',
+	'components/scripts/main.js'];
 
 gulp.task('styles', function () {
 	gulp.src('./resource/css/scss/main.scss')
 		.pipe(sourcemaps.init())
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(sass({outputStyle: 'compressed'})
+			.on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./resource/css/css'))
@@ -24,6 +31,12 @@ gulp.task('serve', function () {
 
 	gulp.watch('./resource/css/scss/*.scss', ['styles']);
 	gulp.watch('./**/*.html').on('change', browserSync.reload);
+});
+
+gulp.task('js', function() {
+	gulp.src(jsSources)
+		.pipe(concat('script.js'))
+		.pipe(gulp.dest('builds/development/js'));
 });
 
 gulp.task('default', ['styles', 'serve']);
