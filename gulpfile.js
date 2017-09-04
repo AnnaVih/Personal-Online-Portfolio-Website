@@ -7,7 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('styles', function () {
 	gulp.src('./resource/css/scss/main.scss')
 		.pipe(sourcemaps.init())
-		.pipe(sass())
+		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./resource/css/css'))
