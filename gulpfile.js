@@ -12,6 +12,8 @@ var jsSources = ['components/scripts/gmaps.js',
 	'components/scripts/typer.js',
 	'components/scripts/main.js'];
 
+var htmlSources = ['builds/development/*.html'];
+
 gulp.task('styles', function () {
 	gulp.src(sassSources)
 		.pipe(sourcemaps.init())
@@ -39,8 +41,8 @@ gulp.task('serve', function () {
 	});
 
 	gulp.watch('components/sass/*.scss', ['styles']);
-	gulp.watch('components/scripts/*.js', ['js']);
-	gulp.watch('**/*.html').on('change', browserSync.reload);
+	gulp.watch(jsSources, ['js']);
+	gulp.watch(htmlSources).on('change', browserSync.reload);
 });
 
 
