@@ -5,30 +5,49 @@ var gulp = require('gulp'),//gulp plagin
 	sourcemaps = require('gulp-sourcemaps'),//Plugin for showing original source code into inspector
 	concat = require('gulp-concat');//Plugin for concating js files into one file
 
-var sassSources = ['components/sass/style.scss'];
 
-var jsSources = ['components/scripts/gmaps.js',
+var env,
+	sassSources,
+	jsSources,
+	htmlSources,
+	outputDir,
+	sassStyle;
+
+env = process.env.NODE_ENV || 'development';
+
+if (env === 'development') {
+	outputDir = 'builds/development/';
+	sassStyle = 'expanded';
+} else {
+	outputDir = 'builds/production/';
+	sassStyle = 'compressed';
+} 
+
+
+sassSources = ['components/sass/style.scss'];
+
+jsSources = ['components/scripts/gmaps.js',
 	'components/scripts/jquery.waypoints.min.js',
 	'components/scripts/typer.js',
 	'components/scripts/main.js'];
 
-var htmlSources = ['builds/development/*.html'];
+htmlSources = [outputDir + '*.html'];
 
 gulp.task('styles', function () {
 	gulp.src(sassSources)
 		.pipe(sourcemaps.init())
-		.pipe(sass({outputStyle: 'expanded'})
+		.pipe(sass({outputStyle: sassStyle})
 			.on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('builds/development/css'))
+		.pipe(gulp.dest(outputDir + 'css'))
 		.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('js', function() {
 	gulp.src(jsSources)
 		.pipe(concat('script.js'))
-		.pipe(gulp.dest('builds/development/js'))
+		.pipe(gulp.dest(outputDir + 'js'))
 		.pipe(browserSync.reload({stream: true}));
 });
 
@@ -36,7 +55,7 @@ gulp.task('serve', function () {
 
 	browserSync.init({
 		server: {
-			baseDir: 'builds/development/'
+			baseDir: outputDir
 		}
 	});
 
