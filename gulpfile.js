@@ -1,16 +1,16 @@
-var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	browserSync = require('browser-sync').create(),
-	autoprefixer = require('gulp-autoprefixer'),
-	sourcemaps = require('gulp-sourcemaps'),
-	concat = require('gulp-concat');
+var gulp = require('gulp'),//gulp plagin
+	sass = require('gulp-sass'),//sass plugin
+	browserSync = require('browser-sync').create(),//Plugin for autoreload page
+	autoprefixer = require('gulp-autoprefixer'),//Plugin for autoprefixer in CSS
+	sourcemaps = require('gulp-sourcemaps'),//Plugin for showing original source code into inspector
+	concat = require('gulp-concat');//Plugin for concating js files into one file
+
+var sassSources = ['components/sass/style.scss'];
 
 var jsSources = ['components/scripts/gmaps.js',
 	'components/scripts/jquery.waypoints.min.js',
 	'components/scripts/typer.js',
 	'components/scripts/main.js'];
-
-var sassSources = ['components/sass/style.scss'];
 
 gulp.task('styles', function () {
 	gulp.src(sassSources)
@@ -34,13 +34,13 @@ gulp.task('serve', function () {
 
 	browserSync.init({
 		server: {
-			baseDir: './builds/development/'
+			baseDir: 'builds/development/'
 		}
 	});
 
-	gulp.watch('./components/sass/*.scss', ['styles']);
-	gulp.watch('./components/scripts/*.js', ['js']);
-	gulp.watch('./**/*.html').on('change', browserSync.reload);
+	gulp.watch('components/sass/*.scss', ['styles']);
+	gulp.watch('components/scripts/*.js', ['js']);
+	gulp.watch('**/*.html').on('change', browserSync.reload);
 });
 
 
