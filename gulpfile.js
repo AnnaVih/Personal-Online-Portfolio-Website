@@ -10,14 +10,23 @@ var jsSources = ['components/scripts/gmaps.js',
 	'components/scripts/typer.js',
 	'components/scripts/main.js'];
 
+var sassSources = ['components/sass/style.scss'];
+
 gulp.task('styles', function () {
-	gulp.src('./resource/css/scss/main.scss')
+	gulp.src(sassSources)
 		.pipe(sourcemaps.init())
-		.pipe(sass({outputStyle: 'compressed'})
+		.pipe(sass({outputStyle: 'expanded'})
 			.on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./resource/css/css'))
+		.pipe(gulp.dest('builds/development/css'))
+		.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('js', function() {
+	gulp.src(jsSources)
+		.pipe(concat('script.js'))
+		.pipe(gulp.dest('builds/development/js'))
 		.pipe(browserSync.reload({stream: true}));
 });
 
@@ -25,18 +34,15 @@ gulp.task('serve', function () {
 
 	browserSync.init({
 		server: {
-			baseDir: './'
+			baseDir: './builds/development/'
 		}
 	});
 
-	gulp.watch('./resource/css/scss/*.scss', ['styles']);
+	gulp.watch('./components/sass/*.scss', ['styles']);
+	gulp.watch('./components/scripts/*.js', ['js']);
 	gulp.watch('./**/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('js', function() {
-	gulp.src(jsSources)
-		.pipe(concat('script.js'))
-		.pipe(gulp.dest('builds/development/js'));
-});
 
-gulp.task('default', ['styles', 'serve']);
+
+gulp.task('default', ['styles', 'js', 'serve']);
