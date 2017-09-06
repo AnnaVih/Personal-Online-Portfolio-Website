@@ -22,8 +22,10 @@
     "gulp-autoprefixer": "^4.0.0",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
     "ionicons": "^3.0.0",
     "jquery": "^3.2.1"
   }

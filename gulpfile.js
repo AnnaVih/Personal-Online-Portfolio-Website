@@ -1,8 +1,10 @@
-var gulp = require('gulp'),//gulp plagin
+var gulp = require('gulp'),//gulp plugin
 	sass = require('gulp-sass'),//sass plugin
 	browserSync = require('browser-sync').create(),//Plugin for autoreload page
 	autoprefixer = require('gulp-autoprefixer'),//Plugin for autoprefixer in CSS
 	sourcemaps = require('gulp-sourcemaps'),//Plugin for showing original source code into inspector
+	gulpif = require('gulp-if'),//Plugin for if statment inside of tasks
+	uglify = require('gulp-uglify'),//Plugin for minify JavaScript
 	concat = require('gulp-concat');//Plugin for concating js files into one file
 
 
@@ -47,6 +49,7 @@ gulp.task('styles', function () {
 gulp.task('js', function() {
 	return gulp.src(jsSources)
 		.pipe(concat('script.js'))
+		.pipe(gulpif(env === 'production', uglify()))
 		.pipe(gulp.dest(outputDir + 'js'))
 		.pipe(browserSync.reload({stream: true}));
 });
