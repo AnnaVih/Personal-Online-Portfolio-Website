@@ -34,7 +34,7 @@ jsSources = ['components/scripts/gmaps.js',
 htmlSources = [outputDir + '*.html'];
 
 gulp.task('styles', function () {
-	gulp.src(sassSources)
+	return gulp.src(sassSources)
 		.pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: sassStyle})
 			.on('error', sass.logError))
@@ -45,7 +45,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('js', function() {
-	gulp.src(jsSources)
+	return gulp.src(jsSources)
 		.pipe(concat('script.js'))
 		.pipe(gulp.dest(outputDir + 'js'))
 		.pipe(browserSync.reload({stream: true}));
