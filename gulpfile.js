@@ -5,6 +5,7 @@ var gulp = require('gulp'),//gulp plugin
 	sourcemaps = require('gulp-sourcemaps'),//Plugin for showing original source code into inspector
 	gulpif = require('gulp-if'),//Plugin for if statment inside of tasks
 	uglify = require('gulp-uglify'),//Plugin for minify JavaScript
+	minifyHTML = require('gulp-minify-html'),
 	concat = require('gulp-concat');//Plugin for concating js files into one file
 
 
@@ -54,6 +55,13 @@ gulp.task('js', function() {
 		.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('html', function() {
+	return gulp.src('builds/development/*.html')
+		.pipe(gulpif(env === 'production', minifyHTML()))
+		.pipe(gulpif(env === 'production', gulp.dest(outputDir)))
+		.pipe(browserSync.reload({stream: true}));
+});
+
 gulp.task('serve', function () {
 
 	browserSync.init({
@@ -64,9 +72,9 @@ gulp.task('serve', function () {
 
 	gulp.watch('components/sass/*.scss', ['styles']);
 	gulp.watch(jsSources, ['js']);
-	gulp.watch(htmlSources).on('change', browserSync.reload);
+	gulp.watch('builds/development/*.html', ['html']);
 });
 
 
 
-gulp.task('default', ['styles', 'js', 'serve']);
+gulp.task('default', ['styles', 'js', 'html', 'serve']);
