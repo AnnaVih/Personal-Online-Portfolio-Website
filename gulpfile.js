@@ -1,12 +1,12 @@
-var gulp = require('gulp'),//gulp plugin
-	sass = require('gulp-sass'),//sass plugin
-	browserSync = require('browser-sync').create(),//Plugin for autoreload page
-	autoprefixer = require('gulp-autoprefixer'),//Plugin for autoprefixer in CSS
-	sourcemaps = require('gulp-sourcemaps'),//Plugin for showing original source code into inspector
-	gulpif = require('gulp-if'),//Plugin for if statment inside of tasks
-	uglify = require('gulp-uglify'),//Plugin for minify JavaScript
-	minifyHTML = require('gulp-minify-html'),
-	concat = require('gulp-concat');//Plugin for concating js files into one file
+var gulp 			= require('gulp'),//gulp plugin
+	sass 			= require('gulp-sass'),//sass plugin
+	browserSync 	= require('browser-sync').create(),//Plugin for autoreload page
+	autoprefixer 	= require('gulp-autoprefixer'),//Plugin for autoprefixer in CSS
+	sourcemaps 		= require('gulp-sourcemaps'),//Plugin for showing original source code into inspector
+	gulpif 			= require('gulp-if'),//Plugin for if statment inside of tasks
+	uglify 			= require('gulp-uglify'),//Plugin for minify JavaScript
+	minifyHTML 		= require('gulp-minify-html'),
+	concat 			= require('gulp-concat');//Plugin for concating js files into one file
 
 
 var env,
@@ -29,10 +29,10 @@ if (env === 'development') {
 
 sassSources = ['components/sass/style.scss'];
 
-jsSources = ['components/scripts/gmaps.js',
-	'components/scripts/jquery.waypoints.min.js',
-	'components/scripts/typer.js',
-	'components/scripts/main.js'];
+jsSources 	= ['components/scripts/gmaps.js',
+			'components/scripts/jquery.waypoints.min.js',
+			'components/scripts/typer.js',
+			'components/scripts/main.js'];
 
 htmlSources = [outputDir + '*.html'];
 
