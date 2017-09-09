@@ -1371,6 +1371,7 @@ input[type=submit]:hover {
 .about img {
   margin: 0 auto;
   width: 100%;
+  height: auto;
   border-radius: 3%;
   display: block;
 }

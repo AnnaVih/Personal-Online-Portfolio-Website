@@ -198,7 +198,7 @@ input[type=submit]:hover{
     margin: 180px auto 0;
 
 	img {
-		@include margin_width;
+		@include margin_width($height: auto);
 	    border-radius: 3%;
 	    display: block;
 	}

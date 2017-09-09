@@ -8,10 +8,11 @@
 	height: $height;
 }
 
-@mixin margin_width($margin:0 auto, $marginTop:null, $width:100%) {
+@mixin margin_width($margin:0 auto, $marginTop:null, $width:100%, $height: null) {
 	margin: $margin;
 	margin-top: $marginTop;
 	width: $width;
+	height: $height;
 }
 
 @mixin logo($marginTop, $width, $opacity:null, $height:null, $float:null) {
