@@ -1,0 +1,26 @@
+@mixin position($width, $position, $top: null, $right: null, $bottom: null, $left: null, $height: null) {
+	width: $width;
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	height: $height;
+}
+
+@mixin margin_width($margin:0 auto, $marginTop:null, $width:100%, $height: null) {
+	margin: $margin;
+	margin-top: $marginTop;
+	width: $width;
+	height: $height;
+}
+
+@mixin logo($marginTop, $width, $opacity:null, $height:null, $float:null) {
+	margin-top: $marginTop;
+	width: $width;
+	opacity: $opacity;
+	height: $height;
+	float: $float;
+}
+
+

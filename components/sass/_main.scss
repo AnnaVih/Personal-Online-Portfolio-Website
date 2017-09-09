@@ -1,0 +1,457 @@
+/* ==================== General ======================= */
+
+.about-me {
+	@include  margin_width(0 auto 25px, $width: 85%);
+    padding: 1%;
+    text-align: justify;
+}
+
+.about,
+.header-text-box,
+.my-projects li,
+.qualities-icon,
+.skills-icon,
+.work-together,
+.footer p {
+    text-align: center;
+}
+
+.about,
+.header,
+.section-about-me,
+.section-hire-me,
+.section-projects {
+    position: relative;
+}
+
+/* ======================  Header ===========================*/
+
+.header {
+	background-image: url(../img/bg-min.jpeg);//fallback
+    background:  linear-gradient(to bottom, $linearStart, $linearStop), url(../img/bg-min.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+
+	&-text-box {
+	    @include position(1140px, absolute, 50%, $left: 50% );
+	    transform: translate(-50%, -50%);
+	}
+
+	&-animated {
+		@include position(15%, absolute, -70%, $left: 42%);
+	}
+
+	.logo-white {
+		@include logo(25px, 160px, .9, 60px, left);
+	}
+
+	.logo-color {
+		@include logo(3px, 150px, .9, 50px, left);
+	    display: none;
+	}
+}
+
+/* =============  Buttons ==============================*/
+
+%btn {
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 300;
+    margin-top: 50px;
+    padding: 12px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+%btn_border {
+    border: 1px solid $button;
+}
+
+%btn_bg{
+    background-color: $button;
+    color: $white;
+}
+
+.btn-inspect:link,
+.btn-inspect:visited {
+	@extend %btn;
+	@extend %btn_border;
+	@extend %btn_bg;
+}
+
+.btn-hire:link,
+.btn-hire:visited {
+	@extend %btn;
+	@extend %btn_border;
+    color: $button;
+}
+
+
+input[type=submit] {
+	@extend %btn;
+	@extend %btn_border;
+	@extend %btn_bg;
+    cursor: pointer;
+}
+
+.btn-hire:active,
+.btn-hire:hover,
+.btn-inspect:active,
+.btn-inspect:hover,
+input[type=submit]:active,
+input[type=submit]:hover{
+    border: 1px solid $button-on-hover;
+    background-color: $button-on-hover;
+    color: $white;
+}
+
+
+/* ============= Main navigation ========================*/
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 15px;
+	
+	li {
+	    display: inline-block;
+	    margin-left: 40px;
+	    margin-top: 25px;
+
+		a:link,
+		a:visited {
+		    border-bottom: 2px solid transparent;
+		    color: $white;
+		    font-size: 90%;
+		    padding: 8px 0;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    transition: border-bottom .3s;
+		}
+
+		a:active,
+		a:hover {
+    		border-bottom: 2px solid $button-on-hover;
+		}//a
+	}//li
+}//.main-nav
+
+/* ============= Sticky navigation =======================*/
+
+.sticky-nav {
+    background-color: $white;
+    background-color: rgba($white, .98);
+    box-shadow: 0 2px 2px $gallery;
+    @include position(100%, fixed, 0, $left: 0);
+    z-index: 9999;
+
+    .main-nav {
+   	 	margin-top: 0;
+
+		li {
+	    	margin: 11px;
+
+		    a:link,
+			a:visited {
+			    color: $main-color;
+			    padding: 17px 0
+			}//a
+		}//li
+	}//.main-nav
+
+	.logo-white {
+    	display: none;
+	}
+
+	.logo-color {
+    	display: block;
+	}
+
+}//.sticky-nav
+
+/* =============  Mobile navigation icon ==================*/
+
+.mobile-nav-icon {
+    cursor: pointer;
+    display: none;
+    float: right;
+    margin-top: 5px;
+
+	i {
+	    color: $white;
+	    font-size: 200%;
+	}
+
+}
+
+
+/* =============  Section About me ==============================*/
+
+.about-me-animated {
+	@include position(9%, absolute, 13%, $right: 46%);
+}
+
+.about {
+    margin: 180px auto 0;
+
+	img {
+		@include margin_width($height: auto);
+	    border-radius: 3%;
+	    display: block;
+	}
+
+	.skills {
+    	width: 60%;
+
+		&-icon {
+		    display: block;
+		    font-size: 350%;
+		}
+
+		.ion-social-html5 {
+		    color: $cinnabar;
+		}
+
+		.ion-social-css3 {
+		    color: $denim;
+		}
+
+		.ion-social-javascript-outline {
+		    color: $ripelemon;
+		}
+
+		.ion-social-sass {
+		    color: $hopbush;
+		}
+
+		.ion-social-github {
+		    color: $mineshaft;
+		}
+
+	}//skills		
+}//.about
+
+.qualities {
+	margin-top: 150px;
+	padding: 1%;
+
+	&-icon {
+	    color: $purple;
+	    display: block;
+	    font-size: 150%;
+	}
+
+	p {
+		font-size: 90%;
+	}
+}
+
+/* =============  Seaction projects ============================*/
+
+.section-projects {
+    background-color: $projects-bg;
+    padding-bottom: 180px;
+
+    .projects-animated {
+    	@include position(4%, absolute, 2%, $left: 37%);
+	}
+
+	.my-projects {
+	    list-style: none;
+	    width: 100%;
+	
+	 	li {
+		    display: block;
+		    float: left;
+		    width: 25%;
+
+		    a:link,
+			a:visited {
+	    		color: $main-color;
+	    		text-decoration: none;
+			}
+			.project,
+			.project-caption {
+			    background-color: $black;
+			    width: 100%;
+			}
+		}//li
+
+		.project {
+		    margin: 0;
+		    overflow: hidden;
+		    position: relative;
+		    img {
+			    height: auto;
+			    opacity: .7;
+			    transform: scale(1.15);
+			    transition: all .5s;
+			    width: 100%;
+			   &:hover {
+				   opacity: 1;
+				   transform: scale(1.06);
+				}
+			}//img
+
+			.project-caption {
+				@include position(100%, absolute, $bottom: 0, $left: 0, $height: 60px);
+			    background-color: rgba($black, .6);
+			    color: $white;
+			    font-weight: 300;
+			    padding: 15.5px;
+			    text-transform: uppercase;
+			}//.project-caption
+		}//.project
+	}//.my-projects
+
+	.projects-animated-work {
+		@include position(8%, absolute, $bottom: 3%, $left: 45.5%);
+	}
+
+}//.section-projects
+
+/* =============  Section Hire me ==================*/
+
+.section-hire-me {
+	@include position(100%, relative, $height: 850px);
+
+	.hire-me-form,
+	p {
+		@include margin_width($width: 90%);
+	}
+
+	.map {
+		@include position(100%, relative, $height: 850px);
+	    z-index: 0;
+	}
+
+	.form-box {
+		@include position(50%, absolute, 0, $right: 0, $height: 850px);
+	    background-color: $white;
+	    background-color: rgba($white, .8);
+	    padding-top: 30px;
+	    z-index: 10;
+
+	    .work-together {
+		    font-weight: 700;
+		    margin: 0 auto 20px;
+		}
+
+		input[type=email],
+		input[type=text],
+		select,
+		textarea {
+		    border-radius: 3px;
+		    border: 1px solid $silver;
+		    padding: 7px;
+		    width: 100%;
+		}
+
+		textarea {
+		    height: 100px
+		}
+	}//.form-box
+
+	.hire-me-animated {
+		@include position(15%, absolute, $bottom: 8%, $left: 75%);
+	}
+
+}//.section-hire-me
+/* =============  Footer ==================*/
+
+.footer {
+    background-color: $mineshaft;
+    font-size: 80%;
+    padding: 5px;
+
+    p {
+	    color: $grey;
+	    margin-top: 10px;
+	}//p
+
+	&-nav li,
+	.social-links li {
+	    display: inline-block;
+	    margin-right: 20px;
+	
+		&:last-child {
+		    margin-right: 0;
+		}
+
+		a:link,
+	 	a:visited {
+		    border: 0;
+		    color: $footer-link;
+		    text-decoration: none;
+		}
+
+	}//li
+
+	&-nav {
+	    float: left;
+	    list-style: none;
+
+		li a:active,
+		li a:hover {
+		    color: $footer-link-hover;
+		}
+	}//&-nav
+
+	.social-links {
+	    float: right;
+	    list-style: none;
+
+	    li a:link,
+		li a:visited {
+ 		   font-size: 160%;
+		}
+
+		.ion-social-linkedin-outline,
+		.ion-social-twitter-outline,
+		.ion-social-facebook-outline,
+		.ion-social-github-outline {
+		    transition: color .3s;
+
+		}
+
+		.ion-social-linkedin-outline:hover {
+		    color: $deepcarulean;
+		}
+
+		.ion-social-twitter-outline:hover {
+		    color: $pictonblue;
+		}
+
+		.ion-social-facebook-outline:hover {
+		    color: $chambray;
+		}
+		.ion-social-github-outline:hover {
+		    color: $black;
+		}
+	}//social-links
+}//.footer
+
+.js-about-me-animated,
+.js-header-animated,
+.js-heading-fadeIn,
+.js-hire-me-animated,
+.js-project-caption,
+.js-projects-animated,
+.js-projects-animated-work {
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+.js-about-me-animated.animated,
+.js-header-animated.animated,
+.js-heading-fadeIn.animated,
+.js-hire-me-animated.animated,
+.js-project-caption.animated,
+.js-projects-animated-work.animated,
+.js-projects-animated.animated {
+    opacity: 1;
+}
+

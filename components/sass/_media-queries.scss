@@ -1,0 +1,366 @@
+/*========== Media-queries =============*/
+
+@media only screen and (max-width:$md-Desctops) {
+
+    .header .header-text-box {
+        padding: 0 2%;
+        width: 100%
+    }
+
+    .row {
+        padding: 0 2%
+    }
+
+    .about-me-animated {
+        width: 9%
+    }
+
+    .projects-animated {
+        width: 6%
+    }
+
+    .form-message {
+        width: 90%
+    }
+
+    .hire-me-animated {
+        bottom: 7%;
+        right: 7%;
+        width: 20%
+    }
+}
+
+@media only screen and (max-width:$tablets) {
+
+    //Base
+    body {
+        font-size: 18px
+    }
+
+    section {
+        padding: 35px 0
+    }
+
+    h3:after {
+        @include margin_width($marginTop: 20px, $width: 70px);
+        height: 1px;
+    }
+
+    //Header
+    .header-animated {
+        top: -60%
+    }
+
+    //About me section
+    .about-me-animated {
+        right: 44%;
+        width: 15%
+    }
+
+    .about {
+        margin-top: 130px;
+
+        img {
+          width: 100%
+        }
+    }
+
+    .qualities {
+        margin-top: 100px
+    }
+
+
+    //Projects section
+    .projects-animated {
+        left: 34%;
+        top: 1%;
+        width: 7%
+    }
+
+    .section-projects .projects-animated-work {
+        left: 42%;
+        width: 18%
+    }
+
+    //Hire me section
+    .section-hire-me {
+        padding-bottom: 20px;
+       
+        p {
+          margin: 30px auto 0;
+        }
+
+        .hire-me-animated {
+            bottom: 3%;
+            left: 3%;
+            width: 25%
+        }//.hire-me-animated
+    }//.section-hire-me
+}//@media
+
+@media only screen and (max-width:$phone-landscape) {
+
+    //Base
+    body {
+        font-size: 17px
+    }
+
+    section {
+        padding: 20px
+    }
+
+    .header-text-box,
+    .row {
+        padding: 0 4%;
+    }
+
+    .col {
+         width: 100%
+     }
+
+    //Headings
+    h2 {
+        font-size: 140%
+    }
+
+    h3 {
+        font-size: 130%;
+    }
+
+    h4 {
+        font-size: 100%
+    }
+    
+    //Main navigation
+    nav {
+        background-color: $purple;
+        .main-nav {
+            display: none;
+            float: left;
+
+            li {
+                margin: 10px;
+
+                a:link,
+                a:visited {
+                    border: none;
+                    font-size: 100%;
+                     padding: 5px 0;
+                }//a
+            }//li
+        }//.main-nav
+    }//nav
+
+    //Mobile navigation
+    .mobile-nav-icon {
+        display: inline-block
+    }
+    
+   //Sticky navigation
+    .sticky-nav .main-nav li {
+        display: block;
+        a:link,
+        a:visited {
+            padding: 5px 0;
+            display: block;
+        }
+    }
+
+    .sticky-nav .mobile-nav-icon i {
+        color: $purple;
+        margin-top: 0
+    }
+      
+    //Header 
+    .header {
+        background-size: 100% 100%;
+
+        .logo-white {
+        margin-top: 5px
+        }
+
+        .logo-color {
+            margin-top: 10px
+        }
+
+        &-animated {
+            display: none;
+        }
+
+        &-text-box h1 {
+            font-size: 200%
+        }
+    }
+
+    //About me section
+    .about-me-animated {
+        top: 6%;
+    }
+
+    .about {
+        margin-top: 100px;
+
+        img {
+            width: 60%;
+         }
+
+        &-me {
+            @include margin_width($marginTop: 40px, $width: 90%);
+            text-align: initial;
+        }
+    
+        .skills {
+            width: 100%;
+
+            &-icon {
+                font-size: 250%
+            }
+
+            div {
+                float: left;
+                width: 18%;
+            }//div
+        }//.skills
+    }//.about
+   
+    .qualities {
+        @include margin_width($marginTop: 80px, $width: 48%);
+        float: left;
+        text-align: center;
+    }
+
+    //Section projects
+    .section-projects .projects-animated {
+        top: 0
+    }
+
+    .my-projects li {
+        width: 50%
+    }
+   
+    //Section hire me
+    .section-hire-me {
+        height: auto;
+
+        .form-box,
+        .map {
+            @include position(100%, relative);
+        }
+
+        .map {
+            height: 300px;
+            z-index: 0
+        }
+
+        .form-box {
+            height: auto;
+            margin-bottom: 20px;
+            padding-top: 30px
+        }
+
+        .hire-me-animated {
+            bottom: 1%;
+            left: 60%;
+            width: 15%
+        }//.hire-me-animated
+    }//.section-hire-me
+
+    .footer .footer-nav,
+    .footer .social-links {
+        float: none;
+        text-align: center
+    }
+}//@media
+
+@media only screen and (max-width:$phone) {
+    //Base
+    section {
+        padding: 15px 0
+    }
+
+
+	//Headings
+    .header .header-text-box h1 {
+        font-size: 140%
+    }
+
+    h2 {
+        font-size: 130%
+    }
+
+    h3 {
+        font-size: 110%;
+
+        &:after {
+            @include margin_width($marginTop: 10px, $width: 70px);
+            height: 1px;
+        }
+    }
+
+    h4 {
+        font-size: 95%
+    }
+
+    //Header
+    .header .logo-white {
+        @include margin_width($marginTop: 5px, $width: 130px);
+    }
+
+    .main-nav{
+        margin-top: 5px;
+        margin-left: 0;
+
+         li {
+            margin-left: 3px;
+            margin-top: 20px;
+            display: block;
+
+            a:link,
+            a:visited {
+                display: block;
+            }
+        }
+    }
+
+    .sticky-nav .main-nav {
+        margin-left: 0
+
+    }
+
+    
+    .header-text-box {
+        margin-top: 15px;
+    }
+
+    //Section projcts
+    .section-projects {
+        padding-bottom: 85px;
+
+        .my-projects li {
+            width: 100%
+        }
+
+        .projects-animated {
+            left: 25%;
+            width: 9%
+        }
+
+        .projects-animated-work {
+            bottom: 0
+        }
+    }
+
+    //Section hire me
+    .section-hire-me p {
+        @include margin_width($marginTop: 10px);
+    }
+
+    .hire-me-form {
+        width: 100%
+    }
+
+    .section-hire-me .hire-me-animated {
+        bottom: 0;
+        width: 30%
+    }
+}//@media
