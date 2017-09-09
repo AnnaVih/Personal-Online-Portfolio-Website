@@ -1,12 +1,17 @@
-var gulp 			= require('gulp'),//gulp plugin
-	sass 			= require('gulp-sass'),//sass plugin
-	browserSync 	= require('browser-sync').create(),//Plugin for autoreload page
-	autoprefixer 	= require('gulp-autoprefixer'),//Plugin for autoprefixer in CSS
-	sourcemaps 		= require('gulp-sourcemaps'),//Plugin for showing original source code into inspector
-	gulpif 			= require('gulp-if'),//Plugin for if statment inside of tasks
-	uglify 			= require('gulp-uglify'),//Plugin for minify JavaScript
-	minifyHTML 		= require('gulp-minify-html'),
-	concat 			= require('gulp-concat');//Plugin for concating js files into one file
+var gulp 				= require('gulp'),
+	sass 				= require('gulp-sass'),
+	browserSync 		= require('browser-sync').create(),//Plugin for autoreload page
+	autoprefixer 		= require('gulp-autoprefixer'),
+	sourcemaps 			= require('gulp-sourcemaps'),//Plugin for showing original source code into inspector
+	gulpif 				= require('gulp-if'),//Plugin for if statment inside of tasks
+	uglify 				= require('gulp-uglify'),
+	minifyHTML 			= require('gulp-minify-html'),
+	imagemin			= require('gulp-imagemin'),
+	imageminGifsicle 	= require('imagemin-gifsicle'),
+	imageminJpegtran 	= require('imagemin-jpegtran'),
+	imageminOptipng 	= require('imagemin-optipng'),
+	imageminSvgo 		= require('imagemin-svgo'),
+	concat 				= require('gulp-concat');
 
 
 var env,
@@ -62,6 +67,19 @@ gulp.task('html', function() {
 		.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('images', function() {
+	return gulp.src('builds/development/img/**/*.*')
+		.pipe(gulpif(env === 'production', imagemin([
+			imagemin.gifsicle({interlaced: true}),
+		    imagemin.jpegtran({progressive: true}),
+		    imagemin.optipng({optimizationLevel: 5}),
+		    imagemin.svgo({plugins: [{removeViewBox: false}]})
+		])))
+		.pipe(gulpif(env === 'production', gulp.dest(outputDir + 'img')))
+		.pipe(browserSync.reload({stream: true}));
+});
+
+
 gulp.task('serve', function () {
 
 	browserSync.init({
@@ -73,8 +91,9 @@ gulp.task('serve', function () {
 	gulp.watch('components/sass/*.scss', ['styles']);
 	gulp.watch(jsSources, ['js']);
 	gulp.watch('builds/development/*.html', ['html']);
+	gulp.watch('builds/development/img/**/*.*', ['images']);
 });
 
 
 
-gulp.task('default', ['styles', 'js', 'html', 'serve']);
+gulp.task('default', ['html', 'images', 'styles', 'js', 'serve']);

@@ -23,11 +23,18 @@
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.3.0",
     "gulp-minify-html": "^1.0.6",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "ionicons": "^3.0.0",
     "jquery": "^3.2.1"
+  },
+  "dependencies": {
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-svgo": "^5.2.2"
   }
 }
