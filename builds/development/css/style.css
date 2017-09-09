@@ -1784,6 +1784,10 @@ input[type=submit]:hover {
     color: #8E44AD;
     margin-top: 0;
   }
+  .header {
+    background-size: 100% 100%;
+    background-attachment: initial;
+  }
   .header .logo-white {
     margin-top: 5px;
   }
