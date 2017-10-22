@@ -2669,4 +2669,30 @@ $(document).ready(function() {
 		  	content: '<p>My place in Maidstone</p>'
 			}
 		});
+
+	/*-----------------------------------
+	/* Open my photo in  modal window*/
+	/*---------------------------------*/
+	var modal       = document.getElementById('myModal');
+	var img         = document.getElementById('myImg');
+	var modalImg    = document.getElementById('img01');
+	var captionText = document.getElementById('caption');
+	var span 		= document.querySelector('.close');
+
+	img.onclick = function() {
+		modal.style.display = 'block';
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+	};
+
+	span.onclick = function() {
+		modal.style.display = 'none';
+	};
+
+	window.onclick = function(event) {
+		if(event.target == modal) {
+			modal.style.display = 'none';
+		}
+	};
+
 });

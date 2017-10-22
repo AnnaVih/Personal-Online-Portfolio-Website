@@ -209,6 +209,8 @@
             @include margin_width($marginTop: 40px, $width: 90%);
             text-align: initial;
         }
+
+        .modal-content {width: 100%}
     
         .skills {
             width: 100%;

@@ -79,6 +79,12 @@ gulp.task('images', function() {
 		.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('docs', function() {
+	return gulp.src('builds/production/**/*.*')
+		.pipe(gulpif(env === 'production', gulp.dest('docs')))
+		.pipe(browserSync.reload({stream: true}));
+});
+
 
 gulp.task('serve', function () {
 
@@ -96,4 +102,4 @@ gulp.task('serve', function () {
 
 
 
-gulp.task('default', ['html', 'images', 'styles', 'js', 'serve']);
+gulp.task('default', ['html', 'images', 'styles', 'js', 'docs', 'serve']);
