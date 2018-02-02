@@ -84,6 +84,7 @@ transform: translate3d(4px, 4px, 0);
 }
 
 .check-source-btn{
+  width: 100%;
   text-shadow: 1px 1px 1px #000000; 
 }
 
