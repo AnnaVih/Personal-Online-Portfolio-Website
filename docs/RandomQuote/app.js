@@ -59,7 +59,7 @@ const UICtrl = (function(){
             if(quote){
                     output += `<p><i class="fa fa-quote-left quote-mark"></i>${quote.quote}</p><p class="author-name"> - ${quote.author}</p>`;
                     UISelectors.twitterLink.href = "http://twitter.com/intent/tweet?hashtags=LikeRandomQuoteMachineByAnnaVihrogonova&text=" + encodeURIComponent(quote.quote);
-                    UISelectors.facebookLink.href = "http://www.facebook.com/sharer.php?u=http://annavihrogonova.co.uk/RandomQuote/index.html";
+                    UISelectors.facebookLink.href = "http://www.facebook.com/sharer.php?u=http://annavihrogonova.co.uk/RandomQuote/index.html/";
             }else {
                 //If no data pass just show fallback default text to user
                 output += `<p><i class="fa fa-quote-left quote-mark"></i>Sorry something went wrong, Please check your internet connection</p>`;
