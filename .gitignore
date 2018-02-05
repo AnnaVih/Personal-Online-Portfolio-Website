@@ -2,4 +2,4 @@
 *.css.map
 node_modules
 .tmp
-
+sftp-config.json
