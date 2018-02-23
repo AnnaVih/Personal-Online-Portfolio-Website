@@ -60,16 +60,21 @@ $(document).ready(function() {
 		});
 
 		/*For my projects*/
+		//Add animated and slideInUp class on document load
+		$('.js-project').find('.js-project-caption').
+		addClass('animated slideInUp');
+
+		
 		$('.js-project').mouseover(function() {
 			$(this).find('.js-project-caption').
-			removeClass('animated slideOutDown').
-			addClass('animated slideInUp');
+			removeClass('animated slideInUp').
+			addClass('animated slideOutDown');
 		});
 
 		$('.js-project').mouseout(function() {
 			$(this).find('.js-project-caption').
-			removeClass('animated slideInUp').
-			addClass('animated slideOutDown');
+			removeClass('animated slideOutDown').
+			addClass('animated slideInUp');
 		});
 
 		/* For HIRE ME section*/
