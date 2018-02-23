@@ -19,6 +19,11 @@ p {
 }
 
 /* Buttons */
+input[type="text"] {
+     -webkit-appearance:none;
+     -webkit-border-radius:0; 
+}
+
 button {
     border: 0;
     outline: 0;
