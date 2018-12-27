@@ -1,21 +1,52 @@
-# My online portfolio website
-=============================
+# My portfolio website
 
+It is my personal web page to show off my work and short info about me.
 
-** Version 1.0.0**
+### Install locally
 
-This is my online portfolio  website with all info about me
+There are two ways for having the app on a local server
 
-Created with HTML5, SASS, jQuery, Gulp
+## Zip archive
 
----
-#Contributors
+You can dowload the latest version directly on [GitHub](https://github.com/AnnaVih/Personal-Online-Portfolio-Website/archive/master.zip).
 
-- Anna Vihrogonova <annavihrogonova@yahoo.com>
+## Easy updates with git
 
----
+If you plan on updating regularly, you can use git :
+```bash
+git clone https://github.com/AnnaVih/Personal-Online-Portfolio-Website.git
+```
+Then to update :
+```bash
+cd Personal-Online-Portfolio-Website
+git pull
+```
 
+### Install the dependencies
 
-License & copyright
+```sh
+$ npm install
+```
+Install dependency
 
-© Anna Vihrogonova, motivated & passionated Front End Developer
+### Serve
+
+```bash
+$ gulp
+```
+Runs the app in development mode.<br>
+
+### Build
+
+```sh
+$ NODE_ENV=production gulp
+```
+Builds the app for production to the `builds/production` folder.<br>
+
+## Contributors
+
+Anna Vihrogonova annavihrogonova@yahoo.com
+
+### License
+
+MIT
