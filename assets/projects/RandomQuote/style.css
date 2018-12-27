@@ -1,0 +1,157 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+/* General */
+#wrapper {
+    height: 100vh;
+    text-align: center;
+}
+
+.footer {
+    overflow: hidden;
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 1%;
+    height: 40px;
+    margin-bottom: 5%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-social {
+    width: 50px;
+    margin-left: 3%;
+    float: left;
+}
+
+.btn-social a {
+    font-size: 1.2em;
+}
+
+.btn-quote a{
+    font-size: 0.8em;
+}
+
+.btn-quote {
+    width: 100px;
+    margin-right: 3%;
+    font-size: 1em;
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: white;  
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 3%;
+    color: #fff;
+    text-shadow: 1px 1px 1px grey;
+}
+
+span {
+    text-align: center;
+    color: grey;
+    font-size: 13px;
+}
+
+/* Random quote box*/
+#random-quote-box{
+    padding: 3%;
+    background-color: white;
+    width: 700px;
+    min-width: 700px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -350px;
+}
+
+/* Random quote */
+.quote-mark {
+    padding: 10px;
+    font-size: 30px;
+}
+.random-quote {
+    min-height: 200px;
+}
+
+.author-name{
+    padding: 50px 3%;
+    text-align: right;
+    font-size: 15px;
+}
+
+/*Transition for fade in and fade out*/
+.random-quote.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.1s 0.6s, opacity 0.1s linear;
+  }
+
+  .random-quote.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.1s 1s, opacity 0.1s linear;
+  }
+
+
+
+  /*For mobile screen*/
+  @media (max-width: 767px) { 
+
+    * {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        padding: 2.5%;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    #random-quote-box {
+        padding: 2%;
+        width: 350px;
+        position: static;
+        margin: 10% auto;
+        min-width: 350px;
+    }
+
+    .author-name {
+        padding: 30px 3%;
+    }
+
+    .quote-mark {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .random-quote {
+        min-height: 180px;
+    }
+}

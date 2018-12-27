@@ -7,10 +7,6 @@ var gulp 				= require('gulp'),
 	uglify 				= require('gulp-uglify'),
 	minifyHTML 			= require('gulp-minify-html'),
 	imagemin			= require('gulp-imagemin'),
-	imageminGifsicle 	= require('imagemin-gifsicle'),
-	imageminJpegtran 	= require('imagemin-jpegtran'),
-	imageminOptipng 	= require('imagemin-optipng'),
-	imageminSvgo 		= require('imagemin-svgo'),
 	concat 				= require('gulp-concat');
 
 
@@ -61,14 +57,15 @@ gulp.task('js', function() {
 });
 
 gulp.task('html', function() {
-	return gulp.src('builds/development/*.html')
+	return gulp.src('./*.html')
 		.pipe(gulpif(env === 'production', minifyHTML()))
 		.pipe(gulpif(env === 'production', gulp.dest(outputDir)))
+		.pipe(gulpif(env === 'development', gulp.dest(outputDir)))
 		.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('images', function() {
-	return gulp.src('builds/development/img/**/*.*')
+	return gulp.src('./assets/img/**/*.*')
 		.pipe(gulpif(env === 'production', imagemin([
 			imagemin.gifsicle({interlaced: true}),
 		    imagemin.jpegtran({progressive: true}),
@@ -76,6 +73,14 @@ gulp.task('images', function() {
 		    imagemin.svgo({plugins: [{removeViewBox: false}]})
 		])))
 		.pipe(gulpif(env === 'production', gulp.dest(outputDir + 'img')))
+		.pipe(gulpif(env === 'development', gulp.dest(outputDir + 'img')))
+		.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('projects', function() {
+	return gulp.src('./assets/projects/**/*.*')
+		.pipe(gulpif(env === 'production', gulp.dest(outputDir + 'projects')))
+		.pipe(gulpif(env === 'development', gulp.dest(outputDir + 'projects')))
 		.pipe(browserSync.reload({stream: true}));
 });
 
@@ -94,12 +99,12 @@ gulp.task('serve', function () {
 		}
 	});
 
-	gulp.watch('components/sass/*.scss', ['styles']);
+	gulp.watch(sassSources, ['styles']);
 	gulp.watch(jsSources, ['js']);
-	gulp.watch('builds/development/*.html', ['html']);
+	gulp.watch(htmlSources, ['html']);
 	gulp.watch('builds/development/img/**/*.*', ['images']);
 });
 
 
 
-gulp.task('default', ['html', 'images', 'styles', 'js', 'docs', 'serve']);
+gulp.task('default', ['html', 'images', 'styles', 'js', 'projects', 'docs', 'serve']);
