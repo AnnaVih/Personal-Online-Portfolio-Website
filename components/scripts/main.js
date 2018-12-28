@@ -110,17 +110,17 @@ $(document).ready(function() {
 
 		var map = new GMaps({
 		    div: '.map',
-	        lat: 51.2627597,
-			lng: 0.82800484,
-			zoom: 9
+	        lat: 51.2627699,
+			lng: 0.99800489,
+			zoom: 10
 		});
 
 		map.addMarker({
-		  	lat: 51.2627597,
-		  	lng: 0.4500384,
-		  	title: 'Maidstone',
+		  	lat: 51.146465,
+		  	lng: 0.875019,
+		  	title: 'Ashford',
 		  	infoWindow: {
-		  	content: '<p>My place in Maidstone</p>'
+		  	content: '<p>My place in Ashford</p>'
 			}
 		});
 
